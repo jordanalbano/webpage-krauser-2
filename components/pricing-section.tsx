@@ -17,7 +17,7 @@ export default function PricingSection() {
       description: 'Tienda online completa con carrito de compras, pagos seguros, gestión de inventario y panel administrativo.',
       price: 'ARS 500,000',
       features: [
-        'Diseño responsive',
+        'Diseño responsivo',
         'Carrito de compras',
         'Pasarelas de pago',
         'Panel de administración',
