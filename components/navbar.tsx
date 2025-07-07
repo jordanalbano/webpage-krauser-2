@@ -27,6 +27,7 @@ export default function Navbar() {
   const menuItems = [
     { name: 'Inicio', href: '#home' },
     { name: 'Servicios', href: '#services' },
+    { name: 'Precios', href: '#pricing' },
     { name: 'Tecnologías', href: '#technologies' },
     { name: 'Nosotros', href: '#about' },
     { name: 'Contacto', href: '#contact' },

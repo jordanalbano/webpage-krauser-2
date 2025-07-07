@@ -8,6 +8,7 @@ import AboutSection from '@/components/about-section';
 import ServicesSection from '@/components/services-section';
 import TechnologiesSection from '@/components/technologies-section';
 import TestimonialsSection from '@/components/testimonials-section';
+import PricingSection from '@/components/pricing-section';
 import WhyUsSection from '@/components/why-us-section';
 import ContactSection from '@/components/contact-section';
 import Footer from '@/components/footer';
@@ -35,6 +36,7 @@ export default function Home() {
       <ServicesSection />
       <TechnologiesSection />
       <TestimonialsSection />
+      <PricingSection />
       <WhyUsSection />
       <ContactSection />
       <Footer />
