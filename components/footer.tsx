@@ -33,7 +33,7 @@ export default function Footer() {
   };
 
   const socialLinks = [
-    { icon: () => <span className="text-lg">📷</span>, href: 'https://www.instagram.com/krauser2021k/', label: \'Instagram' },
+    { icon: () => <span className="text-lg">📷</span>, href: 'https://www.instagram.com/krauser2021k/', label: 'Instagram' },
   ];
 
   return (
