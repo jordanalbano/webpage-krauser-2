@@ -19,7 +19,7 @@ export default function PortfolioSection() {
       category: 'Streamlined Solution',
       type: 'Artisan Marketplace',
       description: 'Specialized marketplace for artisan products with visual gallery, order system and artisan management.',
-      image: '/kLHsavcOy8 copy.jpg',
+      image: '/kLHsavcOy8 copy copy.jpg',
       features: [
         'Visual gallery of artisan products',
         'Artisan profiles and their stories',
@@ -37,28 +37,6 @@ export default function PortfolioSection() {
     },
     {
       id: 2,
-      title: 'E-commerce Website',
-      category: 'Streamlined Solution',
-      type: 'Online Store',
-      description: 'Complete e-commerce platform with shopping cart, secure payments, inventory management, and admin panel.',
-      image: '/chrome_wLfuwLnGrm.png',
-      features: [
-        'Responsive design for all devices',
-        'Shopping cart and checkout system',
-        'Secure payment gateway integration',
-        'Product catalog with search and filters',
-        'Admin dashboard for management',
-        'SEO optimized structure'
-      ],
-      technologies: ['PHP', 'JavaScript', 'MySQL', 'Bootstrap'],
-      gradient: 'from-orange-600 to-red-600',
-      bgGradient: 'gradient-bg-1',
-      icon: ShoppingCart,
-      url: 'https://escabiados.com.ar',
-      quickDelivery: true,
-    },
-    {
-      id: 3,
       title: 'Blog Platform',
       category: 'Streamlined Solution',
       type: 'Content Management',
@@ -80,7 +58,7 @@ export default function PortfolioSection() {
       quickDelivery: true,
     },
     {
-      id: 4,
+      id: 3,
       title: 'Landing Page',
       category: 'Streamlined Solution',
       type: 'Business Website',
