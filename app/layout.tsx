@@ -1,9 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/providers/theme-provider';
 
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Krauser - Desarrollamos el futuro del software',
@@ -17,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className={`${inter.className} theme-transition`}>
+      <body className="theme-transition">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
