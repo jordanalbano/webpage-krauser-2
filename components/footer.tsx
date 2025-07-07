@@ -11,8 +11,8 @@ export default function Footer() {
     'Servicios': [
       'Inteligencia Artificial',
       'Ecommerce',
-      'Cloud Solutions',
-      'Apps Móviles',
+      'Soluciones Cloud',
+      'Aplicaciones Móviles',
       'Integraciones',
       'Automatización',
     ],
@@ -20,7 +20,7 @@ export default function Footer() {
       'Sobre nosotros',
       'Casos de éxito',
       'Blog',
-      'Careers',
+      'Trabajá con nosotros',
       'Contacto',
     ],
     'Recursos': [
@@ -65,7 +65,7 @@ export default function Footer() {
             </div>
             <p className="text-secondary mb-6 leading-relaxed">
               Desarrollamos el futuro del software con soluciones innovadoras de IA, 
-              cloud y automatización para empresas visionarias.
+              cloud y automatización para empresas argentinas visionarias.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -122,7 +122,7 @@ export default function Footer() {
           viewport={{ once: true }}
         >
           <h3 className="text-primary font-bold text-xl mb-6 text-center">
-            ¿Tienes un proyecto en mente?
+            ¿Tenés un proyecto en mente?
           </h3>
           <div className="grid md:grid-cols-3 gap-6 text-center">
             <div className="flex items-center justify-center space-x-3">
@@ -154,7 +154,7 @@ export default function Footer() {
           <div className="flex items-center space-x-1 text-sm">
             <span className="text-muted">Hecho con</span>
             <span className="text-red-500 animate-pulse">❤️</span>
-            <span className="text-muted">para el futuro</span>
+            <span className="text-muted">en Argentina</span>
           </div>
         </motion.div>
       </div>

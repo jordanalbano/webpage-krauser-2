@@ -15,14 +15,14 @@ export default function CustomProjectsSection() {
   const projects = [
     {
       id: 1,
-      title: 'Health License Management System',
+      title: 'Sistema de Gestión de Licencias de Salud',
       client: 'Provincia de Río Negro',
       category: 'Sistema Gubernamental',
       type: 'Plataforma Web Personalizada',
-      description: 'Plataforma web desarrollada para el sector salud público de la provincia de Río Negro, Argentina. Permite a los profesionales de la salud gestionar sus licencias profesionales de forma eficiente y segura.',
+      description: 'Plataforma web desarrollada para el sector salud público de la provincia de Río Negro. Permite a los profesionales de la salud gestionar sus licencias profesionales de forma eficiente y segura.',
       image: '/GueZeUYnuP.png',
-      clientNeed: 'La provincia necesitaba digitalizar y modernizar el proceso de gestión de licencias profesionales de salud, eliminando trámites presenciales y optimizando los tiempos de respuesta.',
-      solution: 'Desarrollamos una plataforma web completa que automatiza todo el proceso de licencias, desde el registro inicial hasta la renovación, con un panel administrativo robusto para la gestión gubernamental.',
+      clientNeed: 'La provincia necesitaba digitalizar y modernizar el proceso de gestión de licencias profesionales de salud, eliminando trámites presenciales y optimizando tiempos de respuesta.',
+      solution: 'Desarrollamos una plataforma web completa que automatiza todo el proceso de licencias, desde el registro inicial hasta la renovación, con panel administrativo robusto para gestión gubernamental.',
       features: [
         'Registro en línea para profesionales de la salud',
         'Sistema de renovación y desactivación de licencias',
@@ -39,15 +39,15 @@ export default function CustomProjectsSection() {
       bgGradient: 'gradient-bg-1',
       icon: Shield,
       duration: '8 months',
-      team: '4 developers',
+      team: '4 desarrolladores',
     },
     {
       id: 2,
-      title: 'Escabiados - Beverage E-commerce',
+      title: 'Escabiados - E-commerce de Bebidas',
       client: 'Emprendedor Local',
       category: 'Comercio Electrónico',
       type: 'Tienda Online Personalizada',
-      description: 'Solución de comercio electrónico totalmente personalizada para la venta de bebidas alcohólicas y no alcohólicas en una localidad específica, con enfoque en la experiencia del usuario y conversión.',
+      description: 'Solución de comercio electrónico totalmente personalizada para la venta de bebidas alcohólicas y no alcohólicas en localidad específica, con enfoque en experiencia del usuario y conversión.',
       image: '/chrome_wLfuwLnGrm.png',
       clientNeed: 'Un emprendedor local necesitaba una plataforma de e-commerce especializada en bebidas, con sistema de entrega localizado y gestión de inventario específica para su modelo de negocio.',
       solution: 'Creamos una tienda online completa con catálogo dinámico, sistema de pagos integrado, gestión de entregas localizadas y panel administrativo para control total del negocio.',
@@ -67,7 +67,7 @@ export default function CustomProjectsSection() {
       bgGradient: 'gradient-bg-2',
       icon: ShoppingCart,
       duration: '6 months',
-      team: '3 developers',
+      team: '3 desarrolladores',
     },
     {
       id: 3,
@@ -75,10 +75,10 @@ export default function CustomProjectsSection() {
       client: 'Tienda Minorista',
       category: 'Sistema Empresarial',
       type: 'Solución TPV Personalizada',
-      description: 'Sistema TPV personalizado desarrollado durante más de 2 años para optimizar las operaciones de venta en tienda y proporcionar información detallada sobre la actividad comercial.',
+      description: 'Sistema TPV personalizado desarrollado durante más de 2 años para optimizar operaciones de venta en tienda y proporcionar información detallada sobre actividad comercial.',
       image: '/Imagen de WhatsApp 2025-07-07 a las 17.52.56_c511e788.jpg',
-      clientNeed: 'Una tienda minorista requería un sistema completo de punto de venta que integrara inventario, ventas, empleados y análisis, con capacidad de escalamiento y funcionalidades específicas del negocio.',
-      solution: 'Desarrollamos un sistema TPV robusto con arquitectura escalable, integraciones de pago, gestión completa de inventario y un catálogo web público para consultas remotas.',
+      clientNeed: 'Una tienda minorista requería un sistema completo de punto de venta que integrara inventario, ventas, empleados y análisis, con capacidad de escalamiento y funcionalidades específicas.',
+      solution: 'Desarrollamos un sistema TPV robusto con arquitectura escalable, integraciones de pago, gestión completa de inventario y catálogo web público para consultas remotas.',
       features: [
         'Seguimiento de inventario y ventas en tiempo real',
         'Integración completa con Mercado Pago',
@@ -95,7 +95,7 @@ export default function CustomProjectsSection() {
       bgGradient: 'gradient-bg-3',
       icon: BarChart3,
       duration: '24 months',
-      team: '5 developers',
+      team: '5 desarrolladores',
     },
   ];
 
@@ -206,7 +206,7 @@ export default function CustomProjectsSection() {
                 </h3>
                 
                 <p className="text-purple-400 font-medium mb-2">
-                  Client: {currentProj.client}
+                  Cliente: {currentProj.client}
                 </p>
                 
                 <p className="text-secondary mb-6 leading-relaxed">
@@ -216,11 +216,11 @@ export default function CustomProjectsSection() {
                 {/* Project Stats */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="glass-card p-3 rounded-lg">
-                    <div className="text-xs text-muted mb-1">Duration</div>
+                    <div className="text-xs text-muted mb-1">Duración</div>
                     <div className="text-sm font-semibold text-primary">{currentProj.duration}</div>
                   </div>
                   <div className="glass-card p-3 rounded-lg">
-                    <div className="text-xs text-muted mb-1">Team</div>
+                    <div className="text-xs text-muted mb-1">Equipo</div>
                     <div className="text-sm font-semibold text-primary">{currentProj.team}</div>
                   </div>
                 </div>

@@ -22,22 +22,22 @@ export default function WhyUsSection() {
     {
       icon: Crown,
       title: 'Experiencia Premium',
-      description: 'Más de 3 años perfeccionando soluciones digitales avanzadas.',
+      description: 'Más de 4 años perfeccionando soluciones digitales avanzadas para empresas argentinas.',
     },
     {
       icon: Zap,
       title: 'Desarrollo Ágil',
-      description: 'Metodologías modernas que aceleran el tiempo de entrega.',
+      description: 'Metodologías modernas que aceleran el tiempo de entrega sin comprometer la calidad.',
     },
     {
       icon: Shield,
       title: 'Seguridad Garantizada',
-      description: 'Implementamos las mejores prácticas de seguridad en cada proyecto.',
+      description: 'Implementamos las mejores prácticas de seguridad en cada proyecto que desarrollamos.',
     },
     {
       icon: Clock,
       title: 'Soporte Continuo',
-      description: 'Acompañamiento post-lanzamiento para asegurar el éxito.',
+      description: 'Acompañamiento post-lanzamiento para asegurar el éxito de tu proyecto.',
     },
   ];
 
@@ -55,7 +55,7 @@ export default function WhyUsSection() {
             <span className="gradient-text">¿Por qué elegirnos?</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            No somos una agencia más. Somos tus socios tecnológicos en la construcción del futuro.
+            No somos una agencia más. Somos tus socios tecnológicos en la construcción del futuro digital.
           </p>
         </motion.div>
 
@@ -149,10 +149,10 @@ export default function WhyUsSection() {
         >
           <div className="glass-effect rounded-2xl p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
-              ¿Listo para transformar tu negocio?
+              ¿Listo para transformar tu empresa?
             </h3>
             <p className="text-gray-300 mb-6">
-              Únete a las empresas que ya están viviendo en el futuro con nuestras soluciones.
+              Sumate a las empresas que ya están viviendo en el futuro con nuestras soluciones.
             </p>
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 neon-glow">
               Comenzar ahora

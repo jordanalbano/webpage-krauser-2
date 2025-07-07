@@ -42,7 +42,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Soluciones con IA, ecommerce y cloud para empresas que piensan en mañana.
+            Soluciones con IA, ecommerce y cloud para empresas que piensan en el mañana.
           </motion.p>
 
           <motion.div

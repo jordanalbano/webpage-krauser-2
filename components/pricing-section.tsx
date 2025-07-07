@@ -13,13 +13,13 @@ export default function PricingSection() {
   const services = [
     {
       icon: ShoppingCart,
-      title: 'E-commerce Store',
-      description: 'Tienda online completa con carrito de compras, pagos seguros, gestión de inventario y panel administrativo.',
+      title: 'Tienda E-commerce',
+      description: 'Tienda online completa con carrito de compras, MercadoPago integrado, gestión de inventario y panel administrativo.',
       price: 'ARS 500,000',
       features: [
         'Diseño responsivo',
         'Carrito de compras',
-        'Pasarelas de pago',
+        'MercadoPago integrado',
         'Panel de administración',
         'SEO optimizado',
         'Soporte 3 meses'
@@ -47,8 +47,8 @@ export default function PricingSection() {
     },
     {
       icon: PenTool,
-      title: 'Blog Website',
-      description: 'Sitio web de blog profesional con CMS, categorías, comentarios y herramientas de SEO avanzadas.',
+      title: 'Sitio Web Blog',
+      description: 'Sitio web de blog profesional con sistema de gestión de contenido, categorías, comentarios y herramientas SEO avanzadas.',
       price: 'ARS 250,000',
       features: [
         'Sistema de gestión de contenido',
@@ -64,7 +64,7 @@ export default function PricingSection() {
     },
     {
       icon: Code,
-      title: 'Custom Development',
+      title: 'Desarrollo Personalizado',
       description: 'Desarrollo personalizado según tus necesidades específicas. Desde aplicaciones web hasta integraciones complejas.',
       price: 'Cotización',
       features: [
@@ -102,10 +102,10 @@ export default function PricingSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="gradient-text">Nuestros Servicios Web</span>
+           <span className="gradient-text">Nuestros Servicios Web</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Soluciones web profesionales diseñadas para impulsar tu presencia digital y hacer crecer tu negocio.
+           Soluciones web profesionales diseñadas para impulsar tu presencia digital y hacer crecer tu empresa.
           </p>
         </motion.div>
 
@@ -194,11 +194,11 @@ export default function PricingSection() {
             <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/5 to-transparent"></div>
             <div className="relative z-10">
               <h3 className="text-2xl font-bold text-white mb-4">
-                ¿Necesitas algo diferente?
+                ¿Necesitás algo diferente?
               </h3>
               <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                Cada proyecto es único. Si tienes una idea específica o necesitas una combinación de servicios, 
-                conversemos para crear la solución perfecta para tu negocio.
+                Cada proyecto es único. Si tenés una idea específica o necesitás una combinación de servicios, 
+                conversemos para crear la solución perfecta para tu empresa.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="btn-gradient text-white px-8 py-3 font-semibold">
@@ -225,7 +225,7 @@ export default function PricingSection() {
           <div className="glass-card rounded-xl p-6 text-center">
             <div className="text-2xl mb-3">💳</div>
             <h4 className="text-white font-bold mb-2">Planes de Pago</h4>
-            <p className="text-gray-400 text-sm">Financiación disponible hasta 12 cuotas sin interés</p>
+            <p className="text-gray-400 text-sm">Financiación disponible hasta 12 cuotas</p>
           </div>
           
           <div className="glass-card rounded-xl p-6 text-center">

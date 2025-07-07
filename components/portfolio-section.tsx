@@ -15,69 +15,69 @@ export default function PortfolioSection() {
   const streamlinedProjects = [
     {
       id: 1,
-      title: 'Azulmia - Artisan Store',
-      category: 'Streamlined Solution',
-      type: 'Artisan Marketplace',
-      description: 'Specialized marketplace for artisan products with visual gallery, order system and artisan management.',
+      title: 'Azulmia - Tienda Artesanal',
+      category: 'Solución Rápida',
+      type: 'Marketplace Artesanal',
+      description: 'Marketplace especializado en productos artesanales con galería visual, sistema de pedidos y gestión de artesanos.',
       image: '/kLHsavcOy8 copy copy.jpg',
       features: [
-        'Visual gallery of artisan products',
-        'Artisan profiles and their stories',
-        'Custom order system',
-        'Inventory management per artisan',
-        'Immersive shopping experience',
-        'Secure payment processing'
+        'Galería visual de productos artesanales',
+        'Perfiles de artesanos y sus historias',
+        'Sistema de pedidos personalizado',
+        'Gestión de inventario por artesano',
+        'Experiencia de compra inmersiva',
+        'Procesamiento seguro de pagos'
       ],
       technologies: ['PHP', 'JavaScript', 'MySQL', 'CSS3'],
       gradient: 'from-orange-600 to-red-600',
       bgGradient: 'gradient-bg-1',
       icon: ShoppingCart,
       url: 'https://azulmia.store/',
-      quickDelivery: true,
+      entregaRapida: true,
     },
     {
       id: 2,
-      title: 'Blog Platform',
-      category: 'Streamlined Solution',
-      type: 'Content Management',
-      description: 'Professional blog platform with content management system, categories, comments, and SEO tools.',
+      title: 'Plataforma de Blog',
+      category: 'Solución Rápida',
+      type: 'Gestión de Contenido',
+      description: 'Plataforma de blog profesional con sistema de gestión de contenido, categorías, comentarios y herramientas SEO.',
       image: '/chrome_LohFGtTflb.png',
       features: [
-        'Rich content editor',
-        'Category and tag system',
-        'Comment management',
-        'Newsletter integration',
-        'Advanced SEO features',
-        'Social media integration'
+        'Editor de contenido enriquecido',
+        'Sistema de categorías y etiquetas',
+        'Gestión de comentarios',
+        'Integración con newsletter',
+        'Funciones SEO avanzadas',
+        'Integración con redes sociales'
       ],
       technologies: ['PHP', 'MySQL', 'CSS3', 'JavaScript'],
       gradient: 'from-purple-600 to-pink-600',
       bgGradient: 'gradient-bg-3',
       icon: PenTool,
       url: 'https://tiny-strudel-111dfb.netlify.app/',
-      quickDelivery: true,
+      entregaRapida: true,
     },
     {
       id: 3,
       title: 'Landing Page',
-      category: 'Streamlined Solution',
-      type: 'Business Website',
-      description: 'Modern landing page optimized for conversions with attractive design and effective call-to-action elements.',
+      category: 'Solución Rápida',
+      type: 'Sitio Web Comercial',
+      description: 'Página de aterrizaje moderna optimizada para conversiones con diseño atractivo y elementos de llamada a la acción efectivos.',
       image: '/chrome_FKVw0kKxVS.png',
       features: [
-        'Unique custom design',
-        'Conversion optimization',
-        'Contact forms',
-        'Analytics integration',
-        'Ultra-fast loading',
-        'Mobile responsive'
+        'Diseño único personalizado',
+        'Optimización para conversiones',
+        'Formularios de contacto',
+        'Integración con analytics',
+        'Carga ultra rápida',
+        'Diseño responsivo'
       ],
       technologies: ['HTML/CSS', 'PHP', 'JavaScript', 'Bootstrap'],
       gradient: 'from-blue-600 to-purple-600',
       bgGradient: 'gradient-bg-2',
       icon: Monitor,
       url: 'https://webevan.krauser.com.ar/#/pages/landing',
-      quickDelivery: true,
+      entregaRapida: true,
     },
   ];
 
@@ -129,7 +129,7 @@ export default function PortfolioSection() {
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-4">
               <Zap className="w-8 h-8 text-yellow-500 mr-3" />
-              <h3 className="text-3xl font-bold text-white">Soluciones Web Rápidas</h3>
+             <h3 className="text-3xl font-bold text-white">Proyectos Web Comunes</h3>
             </div>
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-full border border-yellow-500/30">
               <Zap className="w-4 h-4 text-yellow-500 mr-2" />
@@ -201,10 +201,10 @@ export default function PortfolioSection() {
                     <span className="text-purple-400 font-semibold text-sm uppercase tracking-wide">
                       {currentProj.category}
                     </span>
-                    {currentProj.quickDelivery && (
+                    {currentProj.entregaRapida && (
                       <div className="flex items-center px-2 py-1 bg-yellow-500/20 rounded-full border border-yellow-500/30">
                         <Zap className="w-3 h-3 text-yellow-500 mr-1" />
-                        <span className="text-yellow-400 text-xs font-medium">Quick Delivery</span>
+                        <span className="text-yellow-400 text-xs font-medium">Entrega Rápida</span>
                       </div>
                     )}
                   </div>
@@ -310,11 +310,11 @@ export default function PortfolioSection() {
                   </div>
 
                   {/* Quick Delivery Badge */}
-                  {project.quickDelivery && (
+                  {project.entregaRapida && (
                     <div className="absolute top-3 right-3">
                       <div className="flex items-center px-2 py-1 bg-yellow-500/90 rounded-full">
                         <Zap className="w-3 h-3 text-white mr-1" />
-                        <span className="text-white text-xs font-medium">Quick</span>
+                        <span className="text-white text-xs font-medium">Rápido</span>
                       </div>
                     </div>
                   )}

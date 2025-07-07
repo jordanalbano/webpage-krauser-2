@@ -12,8 +12,8 @@ export default function ServicesSection() {
   const services = [
     {
       icon: Brain,
-      title: 'IA Aplicada',
-      description: 'Integraciones inteligentes con GPT, Gemini y Claude para automatizar y optimizar tus procesos.',
+      title: 'Inteligencia Artificial',
+      description: 'Integraciones inteligentes con ChatGPT, Gemini y Claude para automatizar y optimizar tus procesos de negocio.',
       features: ['Chatbots inteligentes', 'Análisis de datos', 'Automatización de procesos'],
       gradient: 'from-purple-600 to-blue-600',
       bgGradient: 'gradient-bg-1',
@@ -21,31 +21,31 @@ export default function ServicesSection() {
     {
       icon: ShoppingCart,
       title: 'Ecommerce a Medida',
-      description: 'Tiendas online personalizadas que convierten visitantes en clientes satisfechos.',
-      features: ['Diseño responsivo', 'Pagos seguros', 'Gestión de inventario'],
+      description: 'Tiendas online personalizadas que convierten visitantes en clientes. Integradas con MercadoPago y otros medios de pago argentinos.',
+      features: ['Diseño responsivo', 'MercadoPago integrado', 'Gestión de inventario'],
       gradient: 'from-blue-600 to-cyan-600',
       bgGradient: 'gradient-bg-2',
     },
     {
       icon: Cloud,
-      title: 'Cloud Solutions',
-      description: 'Infraestructura escalable en AWS y Google Cloud para tu crecimiento empresarial.',
+      title: 'Soluciones en la Nube',
+      description: 'Infraestructura escalable en AWS y Google Cloud para el crecimiento de tu empresa.',
       features: ['Escalabilidad automática', 'Monitoreo 24/7', 'Backup automático'],
       gradient: 'from-cyan-600 to-teal-600',
       bgGradient: 'gradient-bg-3',
     },
     {
       icon: Smartphone,
-      title: 'Apps Móviles/Web',
-      description: 'Aplicaciones nativas y web que brindan experiencias excepcionales en cualquier dispositivo.',
+      title: 'Aplicaciones Móviles',
+      description: 'Aplicaciones móviles y web que brindan experiencias excepcionales en cualquier dispositivo.',
       features: ['Multiplataforma', 'Offline first', 'Push notifications'],
       gradient: 'from-teal-600 to-green-600',
       bgGradient: 'gradient-bg-1',
     },
     {
       icon: Link,
-      title: 'Integraciones Complejas',
-      description: 'Conectamos tus sistemas existentes para crear un ecosistema digital cohesivo.',
+      title: 'Integraciones',
+      description: 'Conectamos tus sistemas existentes para crear un ecosistema digital unificado y eficiente.',
       features: ['APIs REST/GraphQL', 'Webhooks', 'Sincronización en tiempo real'],
       gradient: 'from-green-600 to-purple-600',
       bgGradient: 'gradient-bg-2',
@@ -53,7 +53,7 @@ export default function ServicesSection() {
     {
       icon: BarChart,
       title: 'Automatización',
-      description: 'Optimizamos tus procesos con automatización inteligente que ahorra tiempo y reduce errores.',
+      description: 'Optimizamos tus procesos empresariales con automatización inteligente que ahorra tiempo y reduce errores.',
       features: ['Workflows automáticos', 'Reportes inteligentes', 'Notificaciones personalizadas'],
       gradient: 'from-orange-600 to-red-600',
       bgGradient: 'gradient-bg-3',
@@ -81,10 +81,10 @@ export default function ServicesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="gradient-text">Nuestros Servicios</span>
+           <span className="gradient-text">Nuestros Servicios</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Soluciones tecnológicas avanzadas diseñadas para impulsar tu negocio hacia el futuro.
+           Soluciones tecnológicas avanzadas diseñadas para impulsar tu empresa hacia el futuro digital.
           </p>
         </motion.div>
 

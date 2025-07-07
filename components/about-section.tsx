@@ -10,9 +10,9 @@ export default function AboutSection() {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   const stats = [
-    { icon: Award, value: '3+', label: 'Años de experiencia' },
+    { icon: Award, value: '4+', label: 'Años de experiencia' },
     { icon: Users, value: '50+', label: 'Proyectos completados' },
-    { icon: Target, value: '100%', label: 'Satisfacción del cliente' },
+    { icon: Target, value: '100%', label: 'Clientes satisfechos' },
     { icon: Zap, value: '24/7', label: 'Soporte técnico' },
   ];
 
@@ -36,7 +36,7 @@ export default function AboutSection() {
             <span className="gradient-text">¿Quiénes somos?</span>
           </h2>
           <p className="text-xl text-secondary max-w-3xl mx-auto leading-relaxed">
-            Fundada en 2021, Krauser nació con la visión de transformar ideas en soluciones digitales innovadoras.
+            Fundada en 2021, Krauser nació con la visión de transformar ideas en soluciones digitales innovadoras para empresas argentinas.
           </p>
         </motion.div>
 
@@ -52,9 +52,9 @@ export default function AboutSection() {
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold text-primary mb-4">Nuestra Misión</h3>
                 <p className="text-secondary leading-relaxed">
-                  Transformamos la manera en que las empresas interactúan con la tecnología, 
-                  creando soluciones que no solo resuelven problemas actuales, sino que 
-                  anticipan las necesidades del futuro.
+                  Transformamos la manera en que las empresas argentinas interactúan con la tecnología, 
+                  creando soluciones que no solo resuelven problemas actuales, sino que anticipan 
+                  las necesidades del futuro digital.
                 </p>
               </div>
             </div>
@@ -66,11 +66,11 @@ export default function AboutSection() {
                 <ul className="space-y-3 text-secondary">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 shadow-lg shadow-purple-500/50"></div>
-                    <span><strong>Innovación:</strong> Siempre a la vanguardia tecnológica</span>
+                    <span><strong>Innovación:</strong> Siempre a la vanguardia de la tecnología</span>
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 shadow-lg shadow-blue-500/50"></div>
-                    <span><strong>Transparencia:</strong> Comunicación clara y honesta</span>
+                    <span><strong>Transparencia:</strong> Comunicación clara y directa</span>
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 shadow-lg shadow-purple-500/50"></div>

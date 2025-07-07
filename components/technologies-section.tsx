@@ -12,7 +12,7 @@ export default function TechnologiesSection() {
     {
       category: 'Inteligencia Artificial',
       items: [
-        { name: 'OpenAI GPT', logo: '🤖' },
+        { name: 'ChatGPT', logo: '🤖' },
         { name: 'Claude AI', logo: '🧠' },
         { name: 'Google Gemini', logo: '💎' },
         { name: 'TensorFlow', logo: '🔬' },
@@ -22,25 +22,25 @@ export default function TechnologiesSection() {
     {
       category: 'Ecommerce',
       items: [
-        { name: 'Shopify', logo: '🛍️' },
         { name: 'WooCommerce', logo: '🏪' },
-        { name: 'Magento', logo: '🛒' },
-        { name: 'Custom Solutions', logo: '⚙️' },
+        { name: 'Shopify', logo: '🛍️' },
+        { name: 'Soluciones Custom', logo: '⚙️' },
+        { name: 'Laravel E-commerce', logo: '🛒' },
       ],
       gradient: 'gradient-bg-2',
     },
     {
-      category: 'Pagos',
+      category: 'Medios de Pago',
       items: [
         { name: 'Mercado Pago', logo: '💳' },
         { name: 'Stripe', logo: '💰' },
         { name: 'PayPal', logo: '💵' },
-        { name: 'Crypto Payments', logo: '₿' },
+        { name: 'Transferencias', logo: '🏦' },
       ],
       gradient: 'gradient-bg-3',
     },
     {
-      category: 'Cloud & Infrastructure',
+      category: 'Cloud e Infraestructura',
       items: [
         { name: 'AWS', logo: '☁️' },
         { name: 'Google Cloud', logo: '🌐' },
@@ -52,9 +52,9 @@ export default function TechnologiesSection() {
     {
       category: 'Desarrollo',
       items: [
-        { name: 'React/Next.js', logo: '⚛️' },
+        { name: 'Laravel (PHP)', logo: '🔴' },
         { name: 'Node.js', logo: '🟢' },
-        { name: 'Python', logo: '🐍' },
+        { name: 'React/Next.js', logo: '⚛️' },
         { name: 'TypeScript', logo: '📝' },
       ],
       gradient: 'gradient-bg-2',
@@ -91,10 +91,10 @@ export default function TechnologiesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="gradient-text">Tecnologías que Dominamos</span>
+           <span className="gradient-text">Tecnologías que Dominamos</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Trabajamos con las tecnologías más avanzadas del mercado para garantizar soluciones de vanguardia.
+           Trabajamos con las tecnologías más avanzadas del mercado para garantizar soluciones de vanguardia.
           </p>
         </motion.div>
 
@@ -152,7 +152,7 @@ export default function TechnologiesSection() {
                 ¿No ves tu tecnología favorita?
               </h3>
               <p className="text-gray-300 mb-6">
-                Nos adaptamos constantemente a las nuevas tecnologías. Si tienes una preferencia específica, 
+                Nos adaptamos constantemente a las nuevas tecnologías. Si tenés una preferencia específica, 
                 conversemos sobre cómo integrarla en tu proyecto.
               </p>
               <button className="btn-gradient text-white px-8 py-3 rounded-lg font-semibold">
