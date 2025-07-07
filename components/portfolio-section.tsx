@@ -15,28 +15,9 @@ export default function PortfolioSection() {
   const projects = [
     {
       id: 1,
-      title: 'Astro Blog - Content Platform',
-      category: 'Blog',
-      type: 'Plataforma de Contenido',
-      description: 'Blog moderno con sistema de gestión de contenido, categorías, búsqueda avanzada y comunidad de lectores.',
-      image: '/chrome_LohFGtTflb.png',
-      features: [
-        'Editor de contenido rico y intuitivo',
-        'Sistema de categorías y etiquetas',
-        'Búsqueda avanzada de artículos',
-        'Comunidad y comentarios',
-        'SEO optimizado para mejor ranking'
-      ],
-      technologies: ['Astro', 'TypeScript', 'Tailwind CSS', 'MDX'],
-      gradient: 'from-purple-600 to-pink-600',
-      bgGradient: 'gradient-bg-1',
-      icon: PenTool,
-    },
-    {
-      id: 2,
-      title: 'Azulmia - Artisan Marketplace',
+      title: 'Azulmia - Artisan Store',
       category: 'E-commerce',
-      type: 'Marketplace Artesanal',
+      type: 'Tienda Artesanal',
       description: 'Marketplace especializado en productos artesanales con galería visual, sistema de pedidos y gestión de artesanos.',
       image: '/kLHsavcOy8.jpg',
       features: [
@@ -48,11 +29,12 @@ export default function PortfolioSection() {
       ],
       technologies: ['Next.js', 'Supabase', 'Tailwind CSS', 'Stripe'],
       gradient: 'from-orange-600 to-red-600',
-      bgGradient: 'gradient-bg-2',
+      bgGradient: 'gradient-bg-1',
       icon: ShoppingCart,
+      url: 'https://azulmia.store/',
     },
     {
-      id: 3,
+      id: 2,
       title: 'Evan - Business Landing',
       category: 'Landing Page',
       type: 'Página Comercial',
@@ -67,8 +49,29 @@ export default function PortfolioSection() {
       ],
       technologies: ['Angular', 'TypeScript', 'SCSS', 'Angular Material'],
       gradient: 'from-blue-600 to-purple-600',
-      bgGradient: 'gradient-bg-3',
+      bgGradient: 'gradient-bg-2',
       icon: Monitor,
+      url: 'https://webevan.krauser.com.ar/#/pages/landing',
+    },
+    {
+      id: 3,
+      title: 'Astro Blog - Content Platform',
+      category: 'Blog',
+      type: 'Plataforma de Contenido',
+      description: 'Blog moderno con sistema de gestión de contenido, categorías, búsqueda avanzada y comunidad de lectores.',
+      image: '/chrome_LohFGtTflb.png',
+      features: [
+        'Editor de contenido rico y intuitivo',
+        'Sistema de categorías y etiquetas',
+        'Búsqueda avanzada de artículos',
+        'Comunidad y comentarios',
+        'SEO optimizado para mejor ranking'
+      ],
+      technologies: ['Astro', 'TypeScript', 'Tailwind CSS', 'MDX'],
+      gradient: 'from-purple-600 to-pink-600',
+      bgGradient: 'gradient-bg-3',
+      icon: PenTool,
+      url: 'https://tiny-strudel-111dfb.netlify.app/',
     },
   ];
 
@@ -221,7 +224,10 @@ export default function PortfolioSection() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="btn-gradient text-white font-semibold group">
+                  <Button 
+                    className="btn-gradient text-white font-semibold group"
+                    onClick={() => window.open(currentProj.url, '_blank')}
+                  >
                     Ver Proyecto Completo
                     <ExternalLink className="ml-2 w-4 h-4 group-hover:scale-110 transition-transform" />
                   </Button>

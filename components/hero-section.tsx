@@ -69,23 +69,6 @@ export default function HeroSection() {
             </Button>
           </motion.div>
 
-          <motion.div
-            className="pt-16"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-          >
-            <div className="flex justify-center">
-              <motion.div
-                className="w-6 h-10 border-2 border-purple-500 rounded-full flex justify-center"
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                <div className="w-1 h-3 bg-purple-500 rounded-full mt-2"></div>
-              </motion.div>
-            </div>
-            <p className="text-sm text-muted mt-2">Scroll para explorar</p>
-          </motion.div>
         </motion.div>
       </div>
 
