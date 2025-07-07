@@ -130,7 +130,13 @@ export default function Navbar() {
             className="flex items-center space-x-2"
             whileHover={{ scale: 1.05 }}
           >
-            <Brain className="w-8 h-8 text-purple-500" />
+            <Image
+              src="/logo.png"
+              alt="Krauser Logo"
+              width={32}
+              height={32}
+              className="w-8 h-8"
+            />
             <span className="text-xl font-bold gradient-text">Krauser</span>
           </motion.div>
 

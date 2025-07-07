@@ -76,9 +76,9 @@ export default function LoadingScreen() {
             <Image
               src="/logo.png"
               alt="Krauser Logo"
-              width={80}
-              height={80}
-              className="w-20 h-20 mx-auto relative z-10"
+              width={120}
+              height={120}
+              className="w-30 h-30 mx-auto relative z-10"
             />
           </div>
         </motion.div>
