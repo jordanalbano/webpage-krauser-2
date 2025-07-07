@@ -54,18 +54,13 @@ export default function HeroSection() {
             <Button
               size="lg"
               className="btn-gradient text-white px-8 py-3 text-lg font-semibold group"
+              onClick={() => {
+                const element = document.getElementById('contact');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
-              Solicitar Demo
+              Solicitar Cotización
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-white px-8 py-3 text-lg font-semibold group glass-effect"
-            >
-              <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
-              Ver Demo
             </Button>
           </motion.div>
 

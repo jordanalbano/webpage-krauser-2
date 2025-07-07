@@ -74,7 +74,7 @@ export default function LoadingScreen() {
           {/* Logo */}
           <div className="relative">
             <Image
-              src="/logo.png"
+              src="/logo-fir copy.png"
               alt="Krauser Logo"
               width={120}
               height={120}

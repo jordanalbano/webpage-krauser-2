@@ -23,14 +23,14 @@ export default function ContactSection() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'hola@krauser.dev',
-      link: 'mailto:hola@krauser.dev',
+      value: 'contacto@krauser.com.ar',
+      link: 'mailto:contacto@krauser.com.ar',
     },
     {
       icon: Phone,
       title: 'Teléfono',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
+      value: '+54 2920 707402',
+      link: '#',
     },
     {
       icon: MapPin,
@@ -42,11 +42,14 @@ export default function ContactSection() {
 
   const services = [
     { value: 'general', label: 'Consulta General' },
-    { value: 'ai', label: 'Soluciones con IA' },
-    { value: 'ecommerce', label: 'Ecommerce' },
-    { value: 'cloud', label: 'Cloud Solutions' },
-    { value: 'mobile', label: 'Apps Móviles' },
-    { value: 'integration', label: 'Integraciones' },
+    { value: 'ecommerce-simple', label: 'E-commerce (Proyecto Común)' },
+    { value: 'landing-simple', label: 'Landing Page (Proyecto Común)' },
+    { value: 'blog-simple', label: 'Blog (Proyecto Común)' },
+    { value: 'ai', label: 'Soluciones con IA (Personalizado)' },
+    { value: 'ecommerce', label: 'E-commerce Personalizado' },
+    { value: 'cloud', label: 'Cloud Solutions (Personalizado)' },
+    { value: 'mobile', label: 'Apps Móviles (Personalizado)' },
+    { value: 'integration', label: 'Integraciones (Personalizado)' },
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -58,8 +61,24 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    
+    // Create WhatsApp message based on service type
+    let message = `Hola! Me interesa solicitar una cotización.\n\n`;
+    message += `Nombre: ${formData.name}\n`;
+    message += `Email: ${formData.email}\n`;
+    if (formData.company) message += `Empresa: ${formData.company}\n`;
+    
+    if (formData.service === 'general') {
+      message += `Tipo: Consulta General\n`;
+    } else if (['ai', 'ecommerce', 'cloud', 'mobile', 'integration'].includes(formData.service)) {
+      message += `Tipo: Proyecto Personalizado - ${services.find(s => s.value === formData.service)?.label}\n`;
+      message += `¿Podrías contarme más detalles sobre qué tipo de ${services.find(s => s.value === formData.service)?.label.toLowerCase()} necesitas?\n`;
+    }
+    
+    message += `\nMensaje: ${formData.message}`;
+    
+    const whatsappUrl = `https://wa.me/5492920707402?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -192,7 +211,7 @@ export default function ContactSection() {
                   type="submit"
                   className="w-full btn-gradient text-white py-3 font-semibold text-lg group"
                 >
-                  Enviar mensaje
+                  Enviar por WhatsApp
                   <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </form>
@@ -218,7 +237,8 @@ export default function ContactSection() {
                   {contactInfo.map((info, index) => (
                     <motion.a
                       key={index}
-                      href={info.link}
+                      href={info.title === 'Teléfono' ? `https://wa.me/5492920707402?text=${encodeURIComponent('Hola! Me interesa solicitar una cotización para un proyecto.')}` : info.link}
+                      target={info.title === 'Teléfono' ? '_blank' : undefined}
                       className="flex items-center space-x-4 p-4 glass-card rounded-lg hover:glass-effect-strong transition-all duration-300 group"
                       whileHover={{ scale: 1.02, x: 5 }}
                     >
@@ -240,6 +260,10 @@ export default function ContactSection() {
               <motion.button
                 className="w-full glass-card-hover rounded-xl p-6 text-left group relative overflow-hidden gradient-bg-3"
                 whileHover={{ scale: 1.02, y: -2 }}
+                onClick={() => {
+                  const message = 'Hola! Me gustaría agendar una reunión para discutir mi proyecto.';
+                  window.open(`https://wa.me/5492920707402?text=${encodeURIComponent(message)}`, '_blank');
+                }}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-transparent to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative z-10 flex items-center space-x-4">
@@ -254,6 +278,10 @@ export default function ContactSection() {
               <motion.button
                 className="w-full glass-card-hover rounded-xl p-6 text-left group relative overflow-hidden gradient-bg-1"
                 whileHover={{ scale: 1.02, y: -2 }}
+                onClick={() => {
+                  const message = 'Hola! Me gustaría chatear sobre mi proyecto.';
+                  window.open(`https://wa.me/5492920707402?text=${encodeURIComponent(message)}`, '_blank');
+                }}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-transparent to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative z-10 flex items-center space-x-4">

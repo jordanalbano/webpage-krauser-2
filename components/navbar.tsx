@@ -131,7 +131,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.05 }}
           >
             <Image
-              src="/logo.png"
+              src="/logo-fir copy.png"
               alt="Krauser Logo"
               width={32}
               height={32}
@@ -172,10 +172,6 @@ export default function Navbar() {
               )}
             </motion.button>
 
-            <Button className="hidden md:block btn-gradient">
-              Solicitar Demo
-            </Button>
-
             {/* Mobile menu button */}
             <Button
               variant="ghost"
@@ -206,9 +202,6 @@ export default function Navbar() {
                 {item.name}
               </a>
             ))}
-            <Button className="w-full mt-4 btn-gradient">
-              Solicitar Demo
-            </Button>
           </div>
         </motion.div>
       </div>

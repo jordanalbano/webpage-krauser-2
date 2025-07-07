@@ -125,11 +125,11 @@ export default function Footer() {
           <div className="grid md:grid-cols-3 gap-6 text-center">
             <div className="flex items-center justify-center space-x-3">
               <Mail className="w-5 h-5 text-purple-500" />
-              <span className="text-secondary">hola@krauser.dev</span>
+              <span className="text-secondary">contacto@krauser.com.ar</span>
             </div>
             <div className="flex items-center justify-center space-x-3">
               <Phone className="w-5 h-5 text-blue-500" />
-              <span className="text-secondary">+1 (555) 123-4567</span>
+              <span className="text-secondary">+54 2920 707402</span>
             </div>
             <div className="flex items-center justify-center space-x-3">
               <MapPin className="w-5 h-5 text-green-500" />
