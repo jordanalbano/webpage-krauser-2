@@ -64,12 +64,6 @@ export default function Navbar() {
                 height={32}
                 className="w-8 h-8"
               />
-                src="/logo.png"
-                alt="Krauser Logo"
-                width={32}
-                height={32}
-                className="w-8 h-8"
-              />
               <span className="text-xl font-bold gradient-text">Krauser</span>
             </motion.div>
 
