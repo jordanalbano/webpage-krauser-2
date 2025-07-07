@@ -15,25 +15,6 @@ export default function PortfolioSection() {
   const projects = [
     {
       id: 1,
-      title: 'Gozaar - E-commerce Platform',
-      category: 'E-commerce',
-      type: 'Tienda Online',
-      description: 'Plataforma de e-commerce completa con sistema de categorías, carrito de compras, gestión de inventario y múltiples opciones de pago.',
-      image: '/chrome_vqrrPZdY94.png',
-      features: [
-        'Catálogo de productos con filtros avanzados',
-        'Sistema de carrito y checkout optimizado',
-        'Panel de administración completo',
-        'Integración con pasarelas de pago',
-        'Diseño responsive y moderno'
-      ],
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      gradient: 'from-emerald-600 to-teal-600',
-      bgGradient: 'gradient-bg-1',
-      icon: ShoppingCart,
-    },
-    {
-      id: 2,
       title: 'Astro Blog - Content Platform',
       category: 'Blog',
       type: 'Plataforma de Contenido',
@@ -48,11 +29,11 @@ export default function PortfolioSection() {
       ],
       technologies: ['Astro', 'TypeScript', 'Tailwind CSS', 'MDX'],
       gradient: 'from-purple-600 to-pink-600',
-      bgGradient: 'gradient-bg-2',
+      bgGradient: 'gradient-bg-1',
       icon: PenTool,
     },
     {
-      id: 3,
+      id: 2,
       title: 'Azulmia - Artisan Marketplace',
       category: 'E-commerce',
       type: 'Marketplace Artesanal',
@@ -67,11 +48,11 @@ export default function PortfolioSection() {
       ],
       technologies: ['Next.js', 'Supabase', 'Tailwind CSS', 'Stripe'],
       gradient: 'from-orange-600 to-red-600',
-      bgGradient: 'gradient-bg-3',
+      bgGradient: 'gradient-bg-2',
       icon: ShoppingCart,
     },
     {
-      id: 4,
+      id: 3,
       title: 'Evan - Business Landing',
       category: 'Landing Page',
       type: 'Página Comercial',
@@ -84,9 +65,9 @@ export default function PortfolioSection() {
         'Animaciones suaves y atractivas',
         'Optimizada para conversiones'
       ],
-      technologies: ['React', 'Framer Motion', 'Tailwind CSS', 'Next.js'],
+      technologies: ['Angular', 'TypeScript', 'SCSS', 'Angular Material'],
       gradient: 'from-blue-600 to-purple-600',
-      bgGradient: 'gradient-bg-1',
+      bgGradient: 'gradient-bg-3',
       icon: Monitor,
     },
   ];
