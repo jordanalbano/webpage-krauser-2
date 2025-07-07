@@ -15,87 +15,87 @@ export default function CustomProjectsSection() {
   const projects = [
     {
       id: 1,
-      title: 'Sistema de Gestión de Licencias de Salud',
-      client: 'Provincia de Río Negro',
-      category: 'Sistema Gubernamental',
-      type: 'Plataforma Web Personalizada',
-      description: 'Plataforma web desarrollada para el sector salud público de la provincia de Río Negro, Argentina. Permite a los profesionales de la salud gestionar sus licencias profesionales de forma eficiente y segura.',
+      title: 'Health License Management System',
+      client: 'Río Negro Province',
+      category: 'Government System',
+      type: 'Custom Web Platform',
+      description: 'Web platform developed for the public health sector of Río Negro province, Argentina. Allows health professionals to manage their professional licenses efficiently and securely.',
       image: '/GueZeUYnuP.png',
-      clientNeed: 'La provincia necesitaba digitalizar y modernizar el proceso de gestión de licencias profesionales de salud, eliminando trámites presenciales y optimizando los tiempos de respuesta.',
-      solution: 'Desarrollamos una plataforma web completa que automatiza todo el proceso de licencias, desde el registro inicial hasta la renovación, con un panel administrativo robusto para la gestión gubernamental.',
+      clientNeed: 'The province needed to digitize and modernize the process of managing professional health licenses, eliminating in-person procedures and optimizing response times.',
+      solution: 'We developed a complete web platform that automates the entire licensing process, from initial registration to renewal, with a robust administrative panel for government management.',
       features: [
-        'Registro en línea para profesionales de la salud',
-        'Sistema de renovación y desactivación de licencias',
-        'Panel de administración para gestión de usuarios',
-        'Interfaz optimizada y fácil de usar',
-        'Integración con bases de datos gubernamentales',
-        'Sistema de notificaciones automáticas',
-        'Reportes y estadísticas en tiempo real',
-        'Seguridad de nivel gubernamental'
+        'Online registration for health professionals',
+        'License renewal and deactivation system',
+        'Administration panel for user management',
+        'Optimized and user-friendly interface',
+        'Integration with government databases',
+        'Automatic notification system',
+        'Real-time reports and statistics',
+        'Government-level security'
       ],
       technologies: ['Laravel (PHP)', 'Livewire', 'MySQL', 'Bootstrap', 'JavaScript'],
       url: 'https://test-salud.rionegro.gov.ar/',
       gradient: 'from-blue-600 to-cyan-600',
       bgGradient: 'gradient-bg-1',
       icon: Shield,
-      duration: '8 meses',
-      team: '4 desarrolladores',
+      duration: '8 months',
+      team: '4 developers',
     },
     {
       id: 2,
-      title: 'Escabiados - E-commerce de Bebidas',
-      client: 'Emprendedor Local',
-      category: 'Comercio Electrónico',
-      type: 'Tienda Online Personalizada',
-      description: 'Solución de comercio electrónico totalmente personalizada para la venta de bebidas alcohólicas y no alcohólicas en una localidad específica, con enfoque en la experiencia del usuario y conversión.',
+      title: 'Beverage E-commerce Platform',
+      client: 'Local Entrepreneur',
+      category: 'E-commerce',
+      type: 'Custom Online Store',
+      description: 'Completely customized e-commerce solution for selling alcoholic and non-alcoholic beverages in a specific locality, with focus on user experience and conversion.',
       image: '/chrome_wLfuwLnGrm.png',
-      clientNeed: 'Un emprendedor local necesitaba una plataforma de e-commerce especializada en bebidas, con sistema de entrega localizado y gestión de inventario específica para su modelo de negocio.',
-      solution: 'Creamos una tienda online completa con catálogo dinámico, sistema de pagos integrado, gestión de entregas localizadas y panel administrativo para control total del negocio.',
+      clientNeed: 'A local entrepreneur needed a specialized e-commerce platform for beverages, with localized delivery system and inventory management specific to their business model.',
+      solution: 'We created a complete online store with dynamic catalog, integrated payment system, localized delivery management and administrative panel for total business control.',
       features: [
-        'Catálogo dinámico de productos con filtros avanzados',
-        'Carrito de compras optimizado para conversión',
-        'Proceso de pago seguro y simplificado',
-        'Integración con múltiples pasarelas de pago',
-        'Sistema de entrega localizado con zonas',
-        'Gestión de inventario en tiempo real',
-        'Panel administrativo completo',
-        'Sistema de promociones y descuentos'
+        'Dynamic product catalog with advanced filters',
+        'Shopping cart optimized for conversion',
+        'Secure and simplified payment process',
+        'Integration with multiple payment gateways',
+        'Localized delivery system with zones',
+        'Real-time inventory management',
+        'Complete administrative panel',
+        'Promotions and discount system'
       ],
       technologies: ['Laravel (PHP)', 'Livewire', 'MySQL', 'Tailwind CSS', 'Alpine.js'],
       url: 'https://escabiados.com.ar',
       gradient: 'from-orange-600 to-red-600',
       bgGradient: 'gradient-bg-2',
       icon: ShoppingCart,
-      duration: '6 meses',
-      team: '3 desarrolladores',
+      duration: '6 months',
+      team: '3 developers',
     },
     {
       id: 3,
-      title: 'Sistema de Punto de Venta (TPV)',
-      client: 'Tienda Minorista',
-      category: 'Sistema Empresarial',
-      type: 'Solución TPV Personalizada',
-      description: 'Sistema TPV personalizado desarrollado durante más de 2 años para optimizar las operaciones de venta en tienda y proporcionar información detallada sobre la actividad comercial.',
+      title: 'Point of Sale System',
+      client: 'Retail Store',
+      category: 'Enterprise System',
+      type: 'Custom POS Solution',
+      description: 'Custom POS system developed over more than 2 years to optimize in-store sales operations and provide detailed information about commercial activity.',
       image: '/Imagen de WhatsApp 2025-07-07 a las 17.52.56_c511e788.jpg',
-      clientNeed: 'Una tienda minorista requería un sistema completo de punto de venta que integrara inventario, ventas, empleados y análisis, con capacidad de escalamiento y funcionalidades específicas del negocio.',
-      solution: 'Desarrollamos un sistema TPV robusto con arquitectura escalable, integraciones de pago, gestión completa de inventario y un catálogo web público para consultas remotas.',
+      clientNeed: 'A retail store required a complete point of sale system that integrated inventory, sales, employees and analytics, with scalability capacity and specific business functionalities.',
+      solution: 'We developed a robust POS system with scalable architecture, payment integrations, complete inventory management and a public web catalog for remote queries.',
       features: [
-        'Seguimiento de inventario y ventas en tiempo real',
-        'Integración completa con Mercado Pago',
-        'Gestión avanzada de empleados y turnos',
-        'Sistema de notas y crédito/fiado',
-        'Configuración de horarios comerciales',
-        'Catálogo web público para consulta de precios',
-        'Reportes detallados y analytics',
-        'Sistema de backup automático'
+        'Real-time inventory and sales tracking',
+        'Complete integration with Mercado Pago',
+        'Advanced employee and shift management',
+        'Notes and credit/tab system',
+        'Business hours configuration',
+        'Public web catalog for price consultation',
+        'Detailed reports and analytics',
+        'Automatic backup system'
       ],
-      technologies: ['Spring Boot (Java)', 'Angular', 'PostgreSQL', 'TypeScript', 'Material Design'],
+      technologies: ['Java', 'Angular', 'PostgreSQL', 'TypeScript', 'Material Design'],
       url: 'https://evan.krauser.com.ar',
       gradient: 'from-purple-600 to-blue-600',
       bgGradient: 'gradient-bg-3',
       icon: BarChart3,
-      duration: '24 meses',
-      team: '5 desarrolladores',
+      duration: '24 months',
+      team: '5 developers',
     },
   ];
 
@@ -127,11 +127,11 @@ export default function CustomProjectsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="gradient-text">Proyectos Personalizados</span>
+            <span className="gradient-text">Custom Projects</span>
           </h2>
           <p className="text-xl text-secondary max-w-3xl mx-auto">
-            Casos reales de soluciones desarrolladas a medida para nuestros clientes. 
-            Cada proyecto refleja nuestro compromiso con la excelencia y la innovación.
+            Real cases of tailored solutions developed for our clients. 
+            Each project reflects our commitment to excellence and innovation.
           </p>
         </motion.div>
 
@@ -147,7 +147,7 @@ export default function CustomProjectsSection() {
             <div className="relative h-96 lg:h-auto overflow-hidden">
               <motion.div
                 key={currentProject}
-                initial={{ opacity: 0, scale: 1.1 }}
+                initial={{ opacity: 0, scale: 1.05 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
                 className="w-full h-full"
@@ -156,12 +156,9 @@ export default function CustomProjectsSection() {
                   src={currentProj.image}
                   alt={currentProj.title}
                   fill
-                  className="object-cover"
+                  className="object-contain bg-white"
                 />
               </motion.div>
-              
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-transparent to-transparent lg:hidden"></div>
               
               {/* Navigation Arrows */}
               <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
@@ -209,7 +206,7 @@ export default function CustomProjectsSection() {
                 </h3>
                 
                 <p className="text-purple-400 font-medium mb-2">
-                  Cliente: {currentProj.client}
+                  Client: {currentProj.client}
                 </p>
                 
                 <p className="text-secondary mb-6 leading-relaxed">
@@ -219,11 +216,11 @@ export default function CustomProjectsSection() {
                 {/* Project Stats */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="glass-card p-3 rounded-lg">
-                    <div className="text-xs text-muted mb-1">Duración</div>
+                    <div className="text-xs text-muted mb-1">Duration</div>
                     <div className="text-sm font-semibold text-primary">{currentProj.duration}</div>
                   </div>
                   <div className="glass-card p-3 rounded-lg">
-                    <div className="text-xs text-muted mb-1">Equipo</div>
+                    <div className="text-xs text-muted mb-1">Team</div>
                     <div className="text-sm font-semibold text-primary">{currentProj.team}</div>
                   </div>
                 </div>
@@ -232,7 +229,7 @@ export default function CustomProjectsSection() {
                 <div className="mb-6">
                   <h4 className="text-primary font-bold mb-2 flex items-center">
                     <Users className="w-4 h-4 mr-2 text-purple-500" />
-                    Necesidad del Cliente:
+                    Client Need:
                   </h4>
                   <p className="text-sm text-secondary leading-relaxed">
                     {currentProj.clientNeed}
@@ -243,7 +240,7 @@ export default function CustomProjectsSection() {
                 <div className="mb-6">
                   <h4 className="text-primary font-bold mb-2 flex items-center">
                     <Code className="w-4 h-4 mr-2 text-blue-500" />
-                    Nuestra Solución:
+                    Our Solution:
                   </h4>
                   <p className="text-sm text-secondary leading-relaxed">
                     {currentProj.solution}
@@ -254,7 +251,7 @@ export default function CustomProjectsSection() {
                 <div className="mb-8">
                   <h4 className="text-primary font-bold mb-3 flex items-center">
                     <Database className="w-4 h-4 mr-2 text-green-500" />
-                    Tecnologías utilizadas:
+                    Technologies used:
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {currentProj.technologies.map((tech, index) => (
@@ -268,24 +265,15 @@ export default function CustomProjectsSection() {
                   </div>
                 </div>
 
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    className="btn-gradient text-white font-semibold group"
-                    onClick={() => window.open(currentProj.url, '_blank')}
-                  >
-                    <Globe className="mr-2 w-4 h-4" />
-                    Visitar Sitio Web
-                    <ExternalLink className="ml-2 w-4 h-4 group-hover:scale-110 transition-transform" />
-                  </Button>
-                  
-                  <Button 
-                    variant="outline" 
-                    className="border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white glass-effect"
-                  >
-                    Solicitar Similar
-                  </Button>
-                </div>
+                {/* View Project Button */}
+                <Button 
+                  className="btn-gradient text-white font-semibold group"
+                  onClick={() => window.open(currentProj.url, '_blank')}
+                >
+                  <Globe className="mr-2 w-4 h-4" />
+                  Visit Website
+                  <ExternalLink className="ml-2 w-4 h-4 group-hover:scale-110 transition-transform" />
+                </Button>
               </motion.div>
             </div>
           </div>
@@ -314,7 +302,7 @@ export default function CustomProjectsSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <h3 className="text-2xl font-bold text-primary mb-8 text-center">
-            Características Principales - {currentProj.title}
+            Key Features - {currentProj.title}
           </h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -338,7 +326,7 @@ export default function CustomProjectsSection() {
 
         {/* All Projects Summary */}
         <motion.div
-          className="grid md:grid-cols-3 gap-8 mb-16"
+          className="grid md:grid-cols-3 gap-8"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -388,38 +376,6 @@ export default function CustomProjectsSection() {
               </div>
             </motion.div>
           ))}
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-        >
-          <div className="glass-effect-strong rounded-2xl p-8 max-w-4xl mx-auto relative overflow-hidden gradient-bg-2">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-blue-600/5 to-transparent"></div>
-            <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-primary mb-4">
-                ¿Tienes un proyecto en mente?
-              </h3>
-              <p className="text-secondary mb-6 max-w-2xl mx-auto">
-                Estos son solo algunos ejemplos de lo que podemos crear para ti. 
-                Cada proyecto es único y se desarrolla específicamente para las necesidades de nuestros clientes.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="btn-gradient text-white px-8 py-3 font-semibold">
-                  Solicitar Cotización Personalizada
-                </Button>
-                <Button 
-                  variant="outline" 
-                  className="border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white glass-effect"
-                >
-                  Ver Más Casos de Éxito
-                </Button>
-              </div>
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>
