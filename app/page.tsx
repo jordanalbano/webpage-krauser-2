@@ -37,6 +37,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <PortfolioSection />
+      <CustomProjectsSection />
       <TechnologiesSection />
       <PricingSection />
       <WhyUsSection />

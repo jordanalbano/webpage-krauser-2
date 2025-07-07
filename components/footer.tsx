@@ -33,7 +33,7 @@ export default function Footer() {
   };
 
   const socialLinks = [
-    { icon: () => <span className="text-lg">📷</span>, href: 'https://www.instagram.com/krauser2021k/', label: \'Instagram' },
+    { icon: () => <span className="text-lg">📷</span>, href: '#', label: 'Instagram' },
   ];
 
   return (
@@ -71,10 +71,11 @@ export default function Footer() {
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={index}
-                  href={social.href}
+                  href="#"
                   className="p-3 glass-effect rounded-lg hover:neon-glow transition-all duration-300 group"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={(e) => e.preventDefault()}
                 >
                   {typeof social.icon === 'function' ? (
                     <social.icon />
