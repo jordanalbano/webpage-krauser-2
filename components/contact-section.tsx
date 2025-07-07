@@ -70,6 +70,14 @@ export default function ContactSection() {
     
     if (formData.service === 'general') {
       message += `Tipo: Consulta General\n`;
+    } else if (['ecommerce-simple', 'landing-simple', 'blog-simple'].includes(formData.service)) {
+      const serviceNames = {
+        'ecommerce-simple': 'E-commerce',
+        'landing-simple': 'Landing Page',
+        'blog-simple': 'Blog'
+      };
+      message += `Tipo: Proyecto Común - ${serviceNames[formData.service as keyof typeof serviceNames]}\n`;
+      message += `Necesito cotización para proyecto común de ${serviceNames[formData.service as keyof typeof serviceNames]}.\n`;
     } else if (['ai', 'ecommerce', 'cloud', 'mobile', 'integration'].includes(formData.service)) {
       message += `Tipo: Proyecto Personalizado - ${services.find(s => s.value === formData.service)?.label}\n`;
       message += `¿Podrías contarme más detalles sobre qué tipo de ${services.find(s => s.value === formData.service)?.label.toLowerCase()} necesitas?\n`;

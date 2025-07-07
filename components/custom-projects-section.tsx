@@ -16,22 +16,22 @@ export default function CustomProjectsSection() {
     {
       id: 1,
       title: 'Health License Management System',
-      client: 'Río Negro Province',
-      category: 'Government System',
-      type: 'Custom Web Platform',
-      description: 'Web platform developed for the public health sector of Río Negro province, Argentina. Allows health professionals to manage their professional licenses efficiently and securely.',
+      client: 'Provincia de Río Negro',
+      category: 'Sistema Gubernamental',
+      type: 'Plataforma Web Personalizada',
+      description: 'Plataforma web desarrollada para el sector salud público de la provincia de Río Negro, Argentina. Permite a los profesionales de la salud gestionar sus licencias profesionales de forma eficiente y segura.',
       image: '/GueZeUYnuP.png',
-      clientNeed: 'The province needed to digitize and modernize the process of managing professional health licenses, eliminating in-person procedures and optimizing response times.',
-      solution: 'We developed a complete web platform that automates the entire licensing process, from initial registration to renewal, with a robust administrative panel for government management.',
+      clientNeed: 'La provincia necesitaba digitalizar y modernizar el proceso de gestión de licencias profesionales de salud, eliminando trámites presenciales y optimizando los tiempos de respuesta.',
+      solution: 'Desarrollamos una plataforma web completa que automatiza todo el proceso de licencias, desde el registro inicial hasta la renovación, con un panel administrativo robusto para la gestión gubernamental.',
       features: [
-        'Online registration for health professionals',
-        'License renewal and deactivation system',
-        'Administration panel for user management',
-        'Optimized and user-friendly interface',
-        'Integration with government databases',
-        'Automatic notification system',
-        'Real-time reports and statistics',
-        'Government-level security'
+        'Registro en línea para profesionales de la salud',
+        'Sistema de renovación y desactivación de licencias',
+        'Panel de administración para gestión de usuarios',
+        'Interfaz optimizada y fácil de usar',
+        'Integración con bases de datos gubernamentales',
+        'Sistema de notificaciones automáticas',
+        'Reportes y estadísticas en tiempo real',
+        'Seguridad de nivel gubernamental'
       ],
       technologies: ['Laravel (PHP)', 'Livewire', 'MySQL', 'Bootstrap', 'JavaScript'],
       url: 'https://test-salud.rionegro.gov.ar/',
@@ -44,22 +44,22 @@ export default function CustomProjectsSection() {
     {
       id: 2,
       title: 'Escabiados - Beverage E-commerce',
-      client: 'Local Entrepreneur',
-      category: 'E-commerce',
-      type: 'Custom Online Store',
-      description: 'Completely customized e-commerce solution for selling alcoholic and non-alcoholic beverages in a specific locality, with focus on user experience and conversion.',
+      client: 'Emprendedor Local',
+      category: 'Comercio Electrónico',
+      type: 'Tienda Online Personalizada',
+      description: 'Solución de comercio electrónico totalmente personalizada para la venta de bebidas alcohólicas y no alcohólicas en una localidad específica, con enfoque en la experiencia del usuario y conversión.',
       image: '/chrome_wLfuwLnGrm.png',
-      clientNeed: 'A local entrepreneur needed a specialized e-commerce platform for beverages, with localized delivery system and inventory management specific to their business model.',
-      solution: 'We created a complete online store with dynamic catalog, integrated payment system, localized delivery management and administrative panel for total business control.',
+      clientNeed: 'Un emprendedor local necesitaba una plataforma de e-commerce especializada en bebidas, con sistema de entrega localizado y gestión de inventario específica para su modelo de negocio.',
+      solution: 'Creamos una tienda online completa con catálogo dinámico, sistema de pagos integrado, gestión de entregas localizadas y panel administrativo para control total del negocio.',
       features: [
-        'Dynamic product catalog with advanced filters',
-        'Shopping cart optimized for conversion',
-        'Secure and simplified payment process',
-        'Integration with multiple payment gateways',
-        'Localized delivery system with zones',
-        'Real-time inventory management',
-        'Complete administrative panel',
-        'Promotions and discounts system'
+        'Catálogo dinámico de productos con filtros avanzados',
+        'Carrito de compras optimizado para conversión',
+        'Proceso de pago seguro y simplificado',
+        'Integración con múltiples pasarelas de pago',
+        'Sistema de entrega localizado con zonas',
+        'Gestión de inventario en tiempo real',
+        'Panel administrativo completo',
+        'Sistema de promociones y descuentos'
       ],
       technologies: ['Laravel (PHP)', 'Livewire', 'MySQL', 'Tailwind CSS', 'Alpine.js'],
       url: 'https://escabiados.com.ar',
@@ -71,25 +71,25 @@ export default function CustomProjectsSection() {
     },
     {
       id: 3,
-      title: 'Point of Sale System',
-      client: 'Retail Store',
-      category: 'Enterprise System',
-      type: 'Custom POS Solution',
-      description: 'Custom POS system developed over more than 2 years to optimize in-store sales operations and provide detailed information about commercial activity.',
+      title: 'Sistema de Punto de Venta (TPV)',
+      client: 'Tienda Minorista',
+      category: 'Sistema Empresarial',
+      type: 'Solución TPV Personalizada',
+      description: 'Sistema TPV personalizado desarrollado durante más de 2 años para optimizar las operaciones de venta en tienda y proporcionar información detallada sobre la actividad comercial.',
       image: '/Imagen de WhatsApp 2025-07-07 a las 17.52.56_c511e788.jpg',
-      clientNeed: 'A retail store required a complete point of sale system that integrated inventory, sales, employees and analytics, with scalability capacity and specific business functionalities.',
-      solution: 'We developed a robust POS system with scalable architecture, payment integrations, complete inventory management and a public web catalog for remote queries.',
+      clientNeed: 'Una tienda minorista requería un sistema completo de punto de venta que integrara inventario, ventas, empleados y análisis, con capacidad de escalamiento y funcionalidades específicas del negocio.',
+      solution: 'Desarrollamos un sistema TPV robusto con arquitectura escalable, integraciones de pago, gestión completa de inventario y un catálogo web público para consultas remotas.',
       features: [
-        'Real-time inventory and sales tracking',
-        'Complete integration with Mercado Pago',
-        'Advanced employee and shift management',
-        'Notes and credit/tab system',
-        'Business hours configuration',
-        'Public web catalog for price consultation',
-        'Detailed reports and analytics',
-        'Automatic backup system'
+        'Seguimiento de inventario y ventas en tiempo real',
+        'Integración completa con Mercado Pago',
+        'Gestión avanzada de empleados y turnos',
+        'Sistema de notas y crédito/fiado',
+        'Configuración de horarios comerciales',
+        'Catálogo web público para consulta de precios',
+        'Reportes detallados y analytics',
+        'Sistema de backup automático'
       ],
-      technologies: ['Java', 'Angular', 'PostgreSQL', 'TypeScript', 'Material Design'],
+      technologies: ['Spring Boot (Java)', 'Angular', 'PostgreSQL', 'TypeScript', 'Material Design'],
       url: 'https://evan.krauser.com.ar',
       gradient: 'from-purple-600 to-blue-600',
       bgGradient: 'gradient-bg-3',
@@ -127,11 +127,11 @@ export default function CustomProjectsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="gradient-text">Custom Projects</span>
+            <span className="gradient-text">Proyectos Personalizados</span>
           </h2>
           <p className="text-xl text-secondary max-w-3xl mx-auto">
-            Real cases of tailored solutions developed for our clients. 
-            Each project reflects our commitment to excellence and innovation.
+            Casos reales de soluciones desarrolladas a medida para nuestros clientes. 
+            Cada proyecto refleja nuestro compromiso con la excelencia y la innovación.
           </p>
         </motion.div>
 
@@ -229,7 +229,7 @@ export default function CustomProjectsSection() {
                 <div className="mb-6">
                   <h4 className="text-primary font-bold mb-2 flex items-center">
                     <Users className="w-4 h-4 mr-2 text-purple-500" />
-                    Client Need:
+                    Necesidad del Cliente:
                   </h4>
                   <p className="text-sm text-secondary leading-relaxed">
                     {currentProj.clientNeed}
@@ -240,7 +240,7 @@ export default function CustomProjectsSection() {
                 <div className="mb-6">
                   <h4 className="text-primary font-bold mb-2 flex items-center">
                     <Code className="w-4 h-4 mr-2 text-blue-500" />
-                    Our Solution:
+                    Nuestra Solución:
                   </h4>
                   <p className="text-sm text-secondary leading-relaxed">
                     {currentProj.solution}
@@ -251,7 +251,7 @@ export default function CustomProjectsSection() {
                 <div className="mb-8">
                   <h4 className="text-primary font-bold mb-3 flex items-center">
                     <Database className="w-4 h-4 mr-2 text-green-500" />
-                    Technologies used:
+                    Tecnologías utilizadas:
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {currentProj.technologies.map((tech, index) => (
@@ -271,7 +271,7 @@ export default function CustomProjectsSection() {
                   onClick={() => window.open(currentProj.url, '_blank')}
                 >
                   <Globe className="mr-2 w-4 h-4" />
-                  Visit Website
+                  Visitar Sitio Web
                   <ExternalLink className="ml-2 w-4 h-4 group-hover:scale-110 transition-transform" />
                 </Button>
               </motion.div>
@@ -302,7 +302,7 @@ export default function CustomProjectsSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <h3 className="text-2xl font-bold text-primary mb-8 text-center">
-            Key Features - {currentProj.title}
+            Características Principales - {currentProj.title}
           </h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -361,17 +361,6 @@ export default function CustomProjectsSection() {
                 
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-muted">{project.duration}</span>
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    className="text-purple-400 hover:text-purple-300 p-0 h-auto"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      window.open(project.url, '_blank');
-                    }}
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                  </Button>
                 </div>
               </div>
             </motion.div>

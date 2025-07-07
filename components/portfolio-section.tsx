@@ -112,10 +112,10 @@ export default function PortfolioSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="gradient-text">Our Projects</span>
+            <span className="gradient-text">Nuestros Proyectos</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our featured work and how we've helped businesses transform their digital presence with modern solutions.
+            Descubre nuestros trabajos destacados y cómo hemos ayudado a empresas a transformar su presencia digital con soluciones modernas.
           </p>
         </motion.div>
 
@@ -129,11 +129,11 @@ export default function PortfolioSection() {
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-4">
               <Zap className="w-8 h-8 text-yellow-500 mr-3" />
-              <h3 className="text-3xl font-bold text-white">Streamlined Web Solutions</h3>
+              <h3 className="text-3xl font-bold text-white">Soluciones Web Rápidas</h3>
             </div>
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-full border border-yellow-500/30">
               <Zap className="w-4 h-4 text-yellow-500 mr-2" />
-              <span className="text-yellow-400 font-semibold">Quick Delivery Available</span>
+              <span className="text-yellow-400 font-semibold">Entrega Rápida Disponible</span>
             </div>
           </div>
 
@@ -223,7 +223,7 @@ export default function PortfolioSection() {
 
                   {/* Features */}
                   <div className="mb-6">
-                    <h4 className="text-white font-bold mb-3">Key Features:</h4>
+                    <h4 className="text-white font-bold mb-3">Características Principales:</h4>
                     <ul className="space-y-2">
                       {currentProj.features.map((feature, index) => (
                         <li key={index} className="flex items-start text-sm text-gray-300">
@@ -236,7 +236,7 @@ export default function PortfolioSection() {
 
                   {/* Technologies */}
                   <div className="mb-8">
-                    <h4 className="text-white font-bold mb-3">Technologies:</h4>
+                    <h4 className="text-white font-bold mb-3">Tecnologías:</h4>
                     <div className="flex flex-wrap gap-2">
                       {currentProj.technologies.map((tech, index) => (
                         <span
@@ -254,7 +254,7 @@ export default function PortfolioSection() {
                     className="btn-gradient text-white font-semibold group"
                     onClick={() => window.open(currentProj.url, '_blank')}
                   >
-                    View Project
+                    Ver Proyecto
                     <ExternalLink className="ml-2 w-4 h-4 group-hover:scale-110 transition-transform" />
                   </Button>
                 </motion.div>

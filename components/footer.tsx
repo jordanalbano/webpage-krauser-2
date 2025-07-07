@@ -33,9 +33,7 @@ export default function Footer() {
   };
 
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
+    { icon: () => <span className="text-lg">📷</span>, href: 'https://www.instagram.com/krauser2021k/', label: 'Instagram' },
   ];
 
   return (
@@ -58,13 +56,12 @@ export default function Footer() {
           >
             <div className="flex items-center space-x-2 mb-6">
               <Image
-                src="/logo.png"
+                src="/logo-fir copy.png"
                 alt="Krauser Logo"
-                width={32}
-                height={32}
-                className="w-8 h-8"
+                width={40}
+                height={40}
+                className="w-10 h-10"
               />
-              <span className="text-2xl font-bold gradient-text">Krauser</span>
             </div>
             <p className="text-secondary mb-6 leading-relaxed">
               Desarrollamos el futuro del software con soluciones innovadoras de IA, 
@@ -79,7 +76,11 @@ export default function Footer() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <social.icon className="w-5 h-5 text-muted group-hover:text-primary transition-colors" />
+                  {typeof social.icon === 'function' ? (
+                    <social.icon />
+                  ) : (
+                    <social.icon className="w-5 h-5 text-muted group-hover:text-primary transition-colors" />
+                  )}
                 </motion.a>
               ))}
             </div>
