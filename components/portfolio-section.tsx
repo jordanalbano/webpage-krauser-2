@@ -15,6 +15,28 @@ export default function PortfolioSection() {
   const streamlinedProjects = [
     {
       id: 1,
+      title: 'Azulmia - Artisan Store',
+      category: 'Streamlined Solution',
+      type: 'Artisan Marketplace',
+      description: 'Specialized marketplace for artisan products with visual gallery, order system and artisan management.',
+      image: '/kLHsavcOy8 copy.jpg',
+      features: [
+        'Visual gallery of artisan products',
+        'Artisan profiles and their stories',
+        'Custom order system',
+        'Inventory management per artisan',
+        'Immersive shopping experience',
+        'Secure payment processing'
+      ],
+      technologies: ['PHP', 'JavaScript', 'MySQL', 'CSS3'],
+      gradient: 'from-orange-600 to-red-600',
+      bgGradient: 'gradient-bg-1',
+      icon: ShoppingCart,
+      url: 'https://azulmia.store/',
+      quickDelivery: true,
+    },
+    {
+      id: 2,
       title: 'E-commerce Website',
       category: 'Streamlined Solution',
       type: 'Online Store',
@@ -36,7 +58,7 @@ export default function PortfolioSection() {
       quickDelivery: true,
     },
     {
-      id: 2,
+      id: 3,
       title: 'Blog Platform',
       category: 'Streamlined Solution',
       type: 'Content Management',
@@ -58,7 +80,7 @@ export default function PortfolioSection() {
       quickDelivery: true,
     },
     {
-      id: 3,
+      id: 4,
       title: 'Landing Page',
       category: 'Streamlined Solution',
       type: 'Business Website',
