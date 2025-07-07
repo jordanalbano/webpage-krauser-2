@@ -3,8 +3,9 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
-import { Moon, Sun, Menu, X, Brain } from 'lucide-react';
+import { Moon, Sun, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,7 +57,19 @@ export default function Navbar() {
               className="flex items-center space-x-2"
               whileHover={{ scale: 1.05 }}
             >
-              <Brain className="w-8 h-8 text-purple-500" />
+              <Image
+                src="/logo.png"
+                alt="Krauser Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8"
+              />
+                src="/logo.png"
+                alt="Krauser Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8"
+              />
               <span className="text-xl font-bold gradient-text">Krauser</span>
             </motion.div>
 

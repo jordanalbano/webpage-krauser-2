@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Brain } from 'lucide-react';
+import Image from 'next/image';
 
 export default function LoadingScreen() {
   const [progress, setProgress] = useState(0);
@@ -39,7 +39,13 @@ export default function LoadingScreen() {
           animate={{ rotate: 360 }}
           transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
         >
-          <Brain className="w-16 h-16 text-purple-500 mx-auto" />
+          <Image
+            src="/logo.png"
+            alt="Krauser Logo"
+            width={64}
+            height={64}
+            className="w-16 h-16 mx-auto"
+          />
         </motion.div>
         
         <motion.h2

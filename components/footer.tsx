@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Brain, Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -56,7 +57,13 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             <div className="flex items-center space-x-2 mb-6">
-              <Brain className="w-8 h-8 text-purple-500" />
+              <Image
+                src="/logo.png"
+                alt="Krauser Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8"
+              />
               <span className="text-2xl font-bold gradient-text">Krauser</span>
             </div>
             <p className="text-secondary mb-6 leading-relaxed">
