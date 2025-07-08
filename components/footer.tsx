@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
 import Image from 'next/image';
 
+const InstagramIcon = () => <span className="text-lg">📷</span>;
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -44,7 +46,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative surface-secondary border-t border-border">
+    { icon: InstagramIcon, href: '#', label: 'Instagram' },
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -85,11 +87,7 @@ export default function Footer() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  {typeof social.icon === 'function' ? (
-                    <social.icon />
-                  ) : (
-                    <social.icon className="w-5 h-5 text-muted group-hover:text-primary transition-colors" />
-                  )}
+                  <social.icon />
                 </motion.a>
               ))}
             </div>
