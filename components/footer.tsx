@@ -9,12 +9,11 @@ export default function Footer() {
 
   const footerLinks = {
     'Servicios': [
-      'Inteligencia Artificial',
       'Ecommerce',
-      'Soluciones Cloud',
-      'Aplicaciones Móviles',
       'Integraciones',
       'Automatización',
+      'Desarrollo Web',
+      'Consultoría Técnica',
     ],
     'Empresa': [
       'Sobre nosotros',
@@ -79,11 +78,12 @@ export default function Footer() {
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={index}
-                  href="#"
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-3 glass-effect rounded-lg hover:neon-glow transition-all duration-300 group"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={(e) => e.preventDefault()}
                 >
                   {typeof social.icon === 'function' ? (
                     <social.icon />

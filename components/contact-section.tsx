@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 export default function ContactSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const [showSuccess, setShowSuccess] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -39,12 +40,20 @@ export default function ContactSection() {
     // Open email client
     window.location.href = mailtoLink;
     
+    // Show success message
+    setShowSuccess(true);
+    
     // Reset form
     setFormData({
       name: '',
       email: '',
       message: ''
     });
+    
+    // Hide success message after 5 seconds
+    setTimeout(() => {
+      setShowSuccess(false);
+    }, 5000);
   };
 
   return (
@@ -82,6 +91,28 @@ export default function ContactSection() {
           <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-blue-600/5 to-transparent"></div>
           
           <div className="relative z-10">
+            {/* Success Message */}
+            {showSuccess && (
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg text-center"
+              >
+                <div className="flex items-center justify-center mb-2">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-2">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="text-green-400 font-semibold">¡Mensaje enviado!</span>
+                </div>
+                <p className="text-green-300 text-sm">
+                  Tu cliente de correo se ha abierto con el mensaje. Te responderemos pronto.
+                </p>
+              </motion.div>
+            )}
+            
             <div className="text-center mb-8">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mb-4">
                 <MessageCircle className="w-8 h-8 text-white" />
