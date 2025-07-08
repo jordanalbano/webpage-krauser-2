@@ -139,28 +139,6 @@ export default function TechnologiesSection() {
           ))}
         </div>
 
-        <motion.div
-          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          <div className="glass-effect-strong rounded-2xl p-8 max-w-4xl mx-auto relative overflow-hidden gradient-bg-1">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-blue-600/5 to-transparent"></div>
-            <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                ¿No ves tu tecnología favorita?
-              </h3>
-              <p className="text-gray-300 mb-6">
-                Nos adaptamos constantemente a las nuevas tecnologías. Si tenés una preferencia específica, 
-                conversemos sobre cómo integrarla en tu proyecto.
-              </p>
-              <button className="btn-gradient text-white px-8 py-3 rounded-lg font-semibold">
-                Conversemos
-              </button>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

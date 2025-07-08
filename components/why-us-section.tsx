@@ -59,93 +59,42 @@ export default function WhyUsSection() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Comparison Table */}
-          <motion.div
-            className="glass-effect rounded-2xl p-8"
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">
-              Krauser vs Competencia
-            </h3>
-            
-            <div className="space-y-4">
-              <div className="grid grid-cols-3 gap-4 text-center border-b border-gray-700 pb-4 mb-6">
-                <div className="text-gray-400 font-semibold">Característica</div>
-                <div className="text-purple-400 font-semibold">Krauser</div>
-                <div className="text-gray-400 font-semibold">Otros</div>
-              </div>
-              
-              {comparisons.map((item, index) => (
-                <motion.div
-                  key={index}
-                  className="grid grid-cols-3 gap-4 items-center py-3 border-b border-gray-800 last:border-b-0"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                >
-                  <div className="text-gray-300 text-sm">{item.feature}</div>
-                  <div className="text-center">
-                    {item.us ? (
-                      <Check className="w-5 h-5 text-green-500 mx-auto" />
-                    ) : (
-                      <X className="w-5 h-5 text-red-500 mx-auto" />
-                    )}
-                  </div>
-                  <div className="text-center">
-                    {item.others ? (
-                      <Check className="w-5 h-5 text-green-500 mx-auto" />
-                    ) : (
-                      <X className="w-5 h-5 text-red-500 mx-auto" />
-                    )}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
 
-          {/* Advantages */}
-          <motion.div
-            className="space-y-6"
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            {advantages.map((advantage, index) => (
-              <motion.div
-                key={index}
-                className="glass-effect rounded-xl p-6 group hover:neon-glow transition-all duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                whileHover={{ scale: 1.02 }}
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 p-3 rounded-lg group-hover:scale-110 transition-transform">
-                    <advantage.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
-                      {advantage.title}
-                    </h4>
-                    <p className="text-gray-300 leading-relaxed">
-                      {advantage.description}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
+        {/* Advantages Grid */}
+        <motion.div
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          {advantages.map((advantage, index) => (
+            <motion.div
+              key={index}
+              className="glass-effect-strong rounded-xl p-6 group hover:neon-glow transition-all duration-300 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+              whileHover={{ scale: 1.02, y: -5 }}
+            >
+              <div className="bg-gradient-to-r from-purple-600 to-blue-600 p-4 rounded-xl mx-auto mb-4 w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <advantage.icon className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                {advantage.title}
+              </h4>
+              <p className="text-gray-300 leading-relaxed text-sm">
+                {advantage.description}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
 
         {/* CTA */}
         <motion.div
           className="text-center mt-16"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
         >
           <div className="glass-effect rounded-2xl p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -154,7 +103,13 @@ export default function WhyUsSection() {
             <p className="text-gray-300 mb-6">
               Sumate a las empresas que ya están viviendo en el futuro con nuestras soluciones.
             </p>
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 neon-glow">
+            <button 
+              className="btn-gradient text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 neon-glow"
+              onClick={() => {
+                const element = document.getElementById('contact');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Comenzar ahora
             </button>
           </div>

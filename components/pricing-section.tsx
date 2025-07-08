@@ -15,7 +15,7 @@ export default function PricingSection() {
       icon: ShoppingCart,
       title: 'Tienda E-commerce',
       description: 'Tienda online completa con carrito de compras, MercadoPago integrado, gestión de inventario y panel administrativo.',
-      price: 'ARS 500,000',
+      price: 'ARS 300,000',
       features: [
         'Diseño responsivo',
         'Carrito de compras',
@@ -26,7 +26,7 @@ export default function PricingSection() {
       ],
       gradient: 'from-emerald-600 to-teal-600',
       bgGradient: 'gradient-bg-1',
-      popular: false,
+      popular: true,
     },
     {
       icon: FileText,
@@ -43,7 +43,7 @@ export default function PricingSection() {
       ],
       gradient: 'from-blue-600 to-purple-600',
       bgGradient: 'gradient-bg-2',
-      popular: true,
+      popular: false,
     },
     {
       icon: PenTool,
