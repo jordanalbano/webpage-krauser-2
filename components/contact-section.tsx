@@ -3,13 +3,16 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Mail, Send, MessageCircle, User } from 'lucide-react';
+import { Mail, Send, MessageCircle, User, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function ContactSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,36 +27,57 @@ export default function ContactSection() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Consulta desde la web - ${formData.name}`);
-    const body = encodeURIComponent(
-      `Nombre: ${formData.name}\n` +
-      `Email: ${formData.email}\n\n` +
-      `Mensaje:\n${formData.message}`
-    );
-    
-    const mailtoLink = `mailto:contacto@krauser.com.ar?subject=${subject}&body=${body}`;
-    
-    // Open email client
-    window.location.href = mailtoLink;
-    
-    // Show success message
-    setShowSuccess(true);
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
-    
-    // Hide success message after 5 seconds
-    setTimeout(() => {
-      setShowSuccess(false);
-    }, 5000);
+    setIsLoading(true);
+    setShowError(false);
+    setShowSuccess(false);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Success
+        setShowSuccess(true);
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+        
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          setShowSuccess(false);
+        }, 5000);
+      } else {
+        // Error from server
+        setErrorMessage(data.error || 'Error al enviar el mensaje');
+        setShowError(true);
+        
+        // Hide error message after 5 seconds
+        setTimeout(() => {
+          setShowError(false);
+        }, 5000);
+      }
+    } catch (error) {
+      // Network or other error
+      setErrorMessage('Error de conexión. Verifica tu internet e intenta nuevamente.');
+      setShowError(true);
+      
+      setTimeout(() => {
+        setShowError(false);
+      }, 5000);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -105,10 +129,32 @@ export default function ContactSection() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-green-400 font-semibold">¡Mensaje enviado!</span>
+                  <span className="text-green-400 font-semibold">¡Mensaje enviado exitosamente!</span>
                 </div>
                 <p className="text-green-300 text-sm">
-                  Tu cliente de correo se ha abierto con el mensaje. Te responderemos pronto.
+                  Tu mensaje ha sido enviado a nuestro equipo. Te responderemos pronto.
+                </p>
+              </motion.div>
+            )}
+
+            {/* Error Message */}
+            {showError && (
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg text-center"
+              >
+                <div className="flex items-center justify-center mb-2">
+                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mr-2">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </div>
+                  <span className="text-red-400 font-semibold">Error al enviar</span>
+                </div>
+                <p className="text-red-300 text-sm">
+                  {errorMessage}
                 </p>
               </motion.div>
             )}
@@ -139,7 +185,8 @@ export default function ContactSection() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full pl-10 pr-4 py-3 glass-card rounded-lg border border-purple-500/20 bg-transparent text-primary placeholder-muted focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all"
+                    disabled={isLoading}
+                    className="w-full pl-10 pr-4 py-3 glass-card rounded-lg border border-purple-500/20 bg-transparent text-primary placeholder-muted focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="Tu nombre completo"
                   />
                 </div>
@@ -158,7 +205,8 @@ export default function ContactSection() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full pl-10 pr-4 py-3 glass-card rounded-lg border border-purple-500/20 bg-transparent text-primary placeholder-muted focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all"
+                    disabled={isLoading}
+                    className="w-full pl-10 pr-4 py-3 glass-card rounded-lg border border-purple-500/20 bg-transparent text-primary placeholder-muted focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="tu@email.com"
                   />
                 </div>
@@ -174,19 +222,30 @@ export default function ContactSection() {
                   value={formData.message}
                   onChange={handleInputChange}
                   required
+                  disabled={isLoading}
                   rows={5}
-                  className="w-full px-4 py-3 glass-card rounded-lg border border-purple-500/20 bg-transparent text-primary placeholder-muted focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all resize-none"
+                  className="w-full px-4 py-3 glass-card rounded-lg border border-purple-500/20 bg-transparent text-primary placeholder-muted focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all resize-none disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Contanos sobre tu proyecto, necesidades específicas, presupuesto estimado, etc."
                 />
               </div>
 
               <Button
                 type="submit"
-                className="w-full btn-gradient text-white py-4 font-semibold text-lg group"
+                disabled={isLoading}
+                className="w-full btn-gradient text-white py-4 font-semibold text-lg group disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <Send className="mr-2 w-5 h-5" />
-                Enviar mensaje
-                <div className="ml-2 group-hover:translate-x-1 transition-transform">→</div>
+                {isLoading ? (
+                  <>
+                    <Loader2 className="mr-2 w-5 h-5 animate-spin" />
+                    Enviando...
+                  </>
+                ) : (
+                  <>
+                    <Send className="mr-2 w-5 h-5" />
+                    Enviar mensaje
+                    <div className="ml-2 group-hover:translate-x-1 transition-transform">→</div>
+                  </>
+                )}
               </Button>
             </form>
 
@@ -195,11 +254,11 @@ export default function ContactSection() {
               <div className="text-center">
                 <p className="text-sm text-muted mb-2">También podés escribirnos directamente a:</p>
                 <a 
-                  href="mailto:contacto@krauser.com.ar"
+                  href="mailto:evillablanca@krauser.com.ar"
                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold transition-colors group"
                 >
                   <Mail className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-                  contacto@krauser.com.ar
+                  evillablanca@krauser.com.ar
                 </a>
               </div>
             </div>
