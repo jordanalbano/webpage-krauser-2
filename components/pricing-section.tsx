@@ -201,12 +201,22 @@ export default function PricingSection() {
                 conversemos para crear la solución perfecta para tu empresa.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="btn-gradient text-white px-8 py-3 font-semibold" href="#contact">
+                <Button 
+                  className="btn-gradient text-white px-8 py-3 font-semibold"
+                  onClick={() => {
+                    const element = document.getElementById('contact');
+                    element?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
                   Consulta Personalizada
                 </Button>
                 <Button 
                   variant="outline" 
                   className="border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white glass-effect"
+                  onClick={() => {
+                    const element = document.getElementById('portfolio');
+                    element?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                 >
                   Ver Portfolio
                 </Button>
