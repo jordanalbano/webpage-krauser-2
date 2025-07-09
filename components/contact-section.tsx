@@ -254,7 +254,7 @@ export default function ContactSection() {
               <div className="text-center">
                 <p className="text-sm text-muted mb-2">También podés escribirnos directamente a:</p>
                 <a 
-                  href="mailto:evillablanca@krauser.com.ar"
+                  href="mailto:contacto@krauser.com.ar"
                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold transition-colors group"
                 >
                   <Mail className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
