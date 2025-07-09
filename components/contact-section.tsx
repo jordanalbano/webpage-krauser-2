@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Mail, Send, MessageCircle, User, Loader2 } from 'lucide-react';
+import { Mail, Send, MessageCircle, User, Loader2, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function ContactSection() {
@@ -18,6 +18,15 @@ export default function ContactSection() {
     email: '',
     message: ''
   });
+
+  const handleWhatsAppContact = () => {
+    const phoneNumber = '5492920707402'; // Argentina format for WhatsApp
+    const message = encodeURIComponent(
+      '¡Hola! Me interesa conocer más sobre los servicios de Krauser. Me gustaría recibir información sobre desarrollo web y soluciones tecnológicas.'
+    );
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -103,6 +112,65 @@ export default function ContactSection() {
           <p className="text-xl text-secondary max-w-2xl mx-auto">
             ¿Tenés un proyecto en mente? Escribinos y conversemos sobre cómo podemos ayudarte.
           </p>
+        </motion.div>
+
+        {/* Contact Options */}
+        <motion.div
+          className="flex flex-col md:flex-row gap-6 justify-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+        >
+          {/* WhatsApp Contact */}
+          <motion.div
+            className="glass-effect-strong rounded-2xl p-6 max-w-sm mx-auto md:mx-0 relative overflow-hidden gradient-bg-2 group cursor-pointer"
+            whileHover={{ scale: 1.02, y: -5 }}
+            onClick={handleWhatsAppContact}
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-green-600/10 via-green-500/5 to-transparent"></div>
+            <div className="relative z-10 text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl mb-4 group-hover:scale-110 transition-transform">
+                <Phone className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-primary mb-2 group-hover:text-green-400 transition-colors">
+                WhatsApp Directo
+              </h3>
+              <p className="text-secondary text-sm mb-4">
+                Chateá con nosotros ahora mismo
+              </p>
+              <div className="text-green-400 font-semibold text-sm">
+                +54 2920 707402
+              </div>
+              <div className="mt-3 text-xs text-muted">
+                Respuesta inmediata en horario comercial
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Email Contact */}
+          <motion.div
+            className="glass-effect-strong rounded-2xl p-6 max-w-sm mx-auto md:mx-0 relative overflow-hidden gradient-bg-3"
+            whileHover={{ scale: 1.02, y: -5 }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-blue-600/5 to-transparent"></div>
+            <div className="relative z-10 text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mb-4">
+                <Mail className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-primary mb-2">
+                Email Profesional
+              </h3>
+              <p className="text-secondary text-sm mb-4">
+                Formulario detallado para tu proyecto
+              </p>
+              <div className="text-purple-400 font-semibold text-sm">
+                contacto@krauser.com.ar
+              </div>
+              <div className="mt-3 text-xs text-muted">
+                Respuesta en menos de 24 horas
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
 
         {/* Contact Form */}
@@ -247,19 +315,46 @@ export default function ContactSection() {
                   </>
                 )}
               </Button>
+
+              {/* WhatsApp Alternative */}
+              <div className="mt-4 text-center">
+                <div className="flex items-center justify-center mb-3">
+                  <div className="flex-1 h-px bg-purple-500/20"></div>
+                  <span className="px-4 text-sm text-muted">o</span>
+                  <div className="flex-1 h-px bg-purple-500/20"></div>
+                </div>
+                <Button
+                  type="button"
+                  onClick={handleWhatsAppContact}
+                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white py-3 font-semibold transition-all duration-300 hover:scale-105 group"
+                >
+                  <Phone className="mr-2 w-5 h-5" />
+                  Contactar por WhatsApp
+                  <div className="ml-2 group-hover:translate-x-1 transition-transform">💬</div>
+                </Button>
+              </div>
             </form>
 
             {/* Contact Email Display */}
             <div className="mt-8 pt-6 border-t border-purple-500/20">
               <div className="text-center">
-                <p className="text-sm text-muted mb-2">También podés escribirnos directamente a:</p>
-                <a 
-                  href="mailto:contacto@krauser.com.ar"
-                  className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold transition-colors group"
-                >
-                  <Mail className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-                  contacto@krauser.com.ar
-                </a>
+                <p className="text-sm text-muted mb-4">También podés contactarnos directamente:</p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a 
+                    href="mailto:contacto@krauser.com.ar"
+                    className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold transition-colors group"
+                  >
+                    <Mail className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+                    contacto@krauser.com.ar
+                  </a>
+                  <button
+                    onClick={handleWhatsAppContact}
+                    className="inline-flex items-center text-green-400 hover:text-green-300 font-semibold transition-colors group"
+                  >
+                    <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+                    +54 2920 707402
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -279,7 +374,11 @@ export default function ContactSection() {
             <ul className="space-y-2 text-sm text-secondary">
               <li className="flex items-center justify-center">
                 <div className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"></div>
-                Respuesta en menos de 24 horas
+                Email: Respuesta en menos de 24 horas
+              </li>
+              <li className="flex items-center justify-center">
+                <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></div>
+                WhatsApp: Respuesta inmediata
               </li>
               <li className="flex items-center justify-center">
                 <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
