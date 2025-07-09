@@ -65,7 +65,7 @@ export default function Footer() {
           >
             <div className="flex items-center space-x-2 mb-6">
               <Image
-                src="/logo-fir copy.png"
+                src="/logo-fir.png"
                 alt="Krauser Logo"
                 width={40}
                 height={40}
