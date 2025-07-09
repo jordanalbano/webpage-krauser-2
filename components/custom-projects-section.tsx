@@ -38,7 +38,7 @@ export default function CustomProjectsSection() {
       gradient: 'from-blue-600 to-cyan-600',
       bgGradient: 'gradient-bg-1',
       icon: Shield,
-      duration: '8 months',
+      duration: '8 meses',
       team: '4 desarrolladores',
     },
     {
@@ -66,7 +66,7 @@ export default function CustomProjectsSection() {
       gradient: 'from-orange-600 to-red-600',
       bgGradient: 'gradient-bg-2',
       icon: ShoppingCart,
-      duration: '6 months',
+      duration: '6 meses',
       team: '3 desarrolladores',
     },
     {
@@ -94,7 +94,7 @@ export default function CustomProjectsSection() {
       gradient: 'from-purple-600 to-blue-600',
       bgGradient: 'gradient-bg-3',
       icon: BarChart3,
-      duration: '24 months',
+      duration: '24 meses',
       team: '5 desarrolladores',
     },
   ];
