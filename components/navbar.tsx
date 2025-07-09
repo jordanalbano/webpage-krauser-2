@@ -124,7 +124,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.05 }}
           >
             <Image
-              src="/logo-fir copy.png"
+              src="/logo-fir.png"
               alt="Krauser Logo"
               width={32}
               height={32}
