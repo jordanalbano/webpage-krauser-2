@@ -36,7 +36,7 @@ export default function AboutSection() {
             <span className="gradient-text">¿Quiénes somos?</span>
           </h2>
           <p className="text-xl text-secondary max-w-3xl mx-auto leading-relaxed">
-            Fundada en 2021, Krauser nació con la visión de transformar ideas en soluciones digitales innovadoras para empresas argentinas.
+            Fundada en 2021, Krauser nació con la visión de transformar ideas en soluciones digitales innovadoras para empresas.
           </p>
         </motion.div>
 
