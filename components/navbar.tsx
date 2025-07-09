@@ -29,8 +29,9 @@ export default function Navbar() {
     { name: 'Inicio', href: '#home' },
     { name: 'Servicios', href: '#services' },
     { name: 'Proyectos', href: '#portfolio' },
-    { name: 'Precios', href: '#pricing' },
     { name: 'Tecnologías', href: '#technologies' },
+    
+    { name: 'Precios', href: '#pricing' },
     { name: 'Nosotros', href: '#about' },
     { name: 'Contacto', href: '#contact' },
   ];
