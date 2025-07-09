@@ -123,7 +123,7 @@ export default function PricingSection() {
             >
               {/* Popular Badge */}
               {service.popular && (
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 mt-4">
                   <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
                     Más Popular
                   </div>
