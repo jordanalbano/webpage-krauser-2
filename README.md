@@ -26,4 +26,4 @@ EMAIL_PASS=your-gmail-app-password
 ### Other Email Providers:
 You can modify the transporter configuration in `app/api/contact/route.ts` to use other email providers like Outlook, Yahoo, or custom SMTP servers.
 
-The contact form will send emails to: `evillablanca@krauser.com.ar`
+The contact form will send emails to: `contacto@krauser.com.ar`
