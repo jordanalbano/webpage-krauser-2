@@ -258,7 +258,7 @@ export default function ContactSection() {
                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold transition-colors group"
                 >
                   <Mail className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-                  evillablanca@krauser.com.ar
+                  contacto@krauser.com.ar
                 </a>
               </div>
             </div>
