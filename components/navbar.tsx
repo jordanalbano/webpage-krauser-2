@@ -28,10 +28,10 @@ export default function Navbar() {
   const menuItems = [
     { name: 'Inicio', href: '#home' },
     { name: 'Servicios', href: '#services' },
+    { name: 'Nosotros', href: '#about' },
     { name: 'Proyectos', href: '#portfolio' },
     { name: 'Tecnologías', href: '#technologies' },
     { name: 'Precios', href: '#pricing' },
-    { name: 'Nosotros', href: '#about' },
     { name: 'Contacto', href: '#contact' },
   ];
 
