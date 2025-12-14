@@ -71,7 +71,7 @@ export default function CustomProjectsSection() {
     },
     {
       id: 3,
-      title: 'Sistema de Punto de Venta (TPV)',
+      title: 'Evan - Sistema de gestion comercial',
       client: 'Tienda Minorista',
       category: 'Sistema Empresarial',
       type: 'Solución TPV Personalizada',
