@@ -71,7 +71,7 @@ export default function CustomProjectsSection() {
     },
     {
       id: 3,
-      title: 'Evan - Sistema de gestion comercial',
+      title: 'Evan - Sistema de gestión comercial',
       client: 'Tienda Minorista',
       category: 'Sistema Empresarial',
       type: 'Producto Principal',
